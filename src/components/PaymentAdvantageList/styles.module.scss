@@ -1,3 +1,5 @@
+@import "/src/styles/colors";
+
 .list {
   list-style: none;
   padding: 0 0 0 48px;
@@ -11,7 +13,7 @@
   font-size: 20px;
   font-weight: 400;
   margin: 0 0 10px;
-  color: #0070f3;
+  color: $prix;
 }
 
 .text {

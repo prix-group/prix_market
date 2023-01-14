@@ -1,3 +1,5 @@
+@import "src/styles/colors";
+
 @font-face {
   font-family: 'Fester';
   src: url("../../../public/fonts/Fester/Fester_Regular.woff");
@@ -16,19 +18,6 @@
   display: flex;
   max-width: 1280px;
   margin: 0 auto;
-}
-
-.content { //TODO: ЧТО ТУТ ДЕЛАТЬ БЛЯТЬ КОНТЕНТ
-  font-family: 'Fester', sans-serif;
-  font-weight: 800;
-
-  color: #FFFFFF;
-
-  margin: 0 auto;
-
-  display: flex;
-  flex-direction: column;
-
 }
 
 .title {

@@ -1,3 +1,5 @@
+@import "src/styles/colors";
+
 .blog {
   width: 100%;
   display: flex;
@@ -12,7 +14,7 @@
   flex-direction: column;
   align-items: center;
 
-  font-family: 'Fester', sans-serif;
+  font-family: 'Fester', Inter, sans-serif;
   font-weight: 800;
   text-align: center;
 }
@@ -29,7 +31,7 @@
   margin: 30px 0 50px;
   font-size: 18px;
   font-weight: 200;
-  color: #A2A2A2;
+  color: $gray-blog;
 }
 
 .container {
@@ -72,7 +74,7 @@
 .cite {
   font-size: 14px;
   font-weight: 300;
-  color: #A2A2A2;
+  color: $gray-blog;
 }
 
 .description {
@@ -82,12 +84,12 @@
 
 .link {
   text-decoration: none;
-  color: #0070f3;
+  color: $prix;
   transition: color .3s ease-in-out;
   margin: 0 0 20px;
 
   &:hover {
-    color: #3e62a8;
+    color: $prix-dark;
   }
 }
 

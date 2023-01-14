@@ -32,17 +32,17 @@ export const Advantage: FC<IAdvantage> = ({ type, flexReverse, title, subtitle, 
     return (
         <section className={cn(
             styles['advantages'],
-            {[styles['advantages--grey']] : type !== 'partners'}
+            {[styles['advantages--grey']]: type !== 'partners'}
         )} key={type}>
             <div className={cn(
                 styles['wrapper'],
-                {[styles['wrapper--flexReverse']] : flexReverse},
+                {[styles['wrapper--flexReverse']]: flexReverse},
 
             )}>
                 <div className={styles.info}>
                     <h2 className={styles.title}>
                         { title }
-                        {/*<div className="advantages__title-border"></div>*/}
+                        {/*/!*<div className="advantages__title-border"></div>*!/TODO:WILL BE ADDED? */}
                     </h2>
                     <p className={styles.subtitle}>
                         { subtitle }
@@ -51,7 +51,7 @@ export const Advantage: FC<IAdvantage> = ({ type, flexReverse, title, subtitle, 
                 </div>
                 <div className={cn(
                     styles['imageContainer'],
-                    {[styles['imageContainer--transparent']] : type !== 'partners'}
+                    {[styles['imageContainer--transparent']]: type !== 'partners'}
                 )}>
                     <img className={styles.image} src={image} alt={image}/>
                 </div>

@@ -1,7 +1,9 @@
+@import "src/styles/colors";
+
 .footer {
   width: 100%;
-  font-family: Montserrat, sans-serif;
-  background-color: #F7F7F7;
+  font-family: Fester, Inter, sans-serif;
+  background-color: $light-gray-advantages;
 }
 
 .wrapper {
@@ -37,15 +39,15 @@
   border-radius: 15px;
   padding: 7px 20px;
 
-  background-color: #0070f3;
-  color: #FFFFFF;
+  background-color: $prix;
+  color: $white;
   cursor: pointer;
 
   transition: all .2s ease-in-out;
 }
 
 .footer__holding-info .button:hover {
-  background-color: dodgerblue;
+  background-color: $prix-sat;
   scale: 1.03;
 }
 
@@ -84,7 +86,7 @@
   display: flex;
   justify-content: space-between;
 
-  border-top: 1px solid #A2A2A2;
+  border-top: 1px solid $gray-blog;
 }
 
 .copyright {
@@ -109,7 +111,7 @@
 
   &:hover {
     scale: 1.05;
-    background-color: #A2A2A2;
+    background-color: $gray-blog;
   }
 }
 

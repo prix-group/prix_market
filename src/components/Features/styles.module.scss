@@ -1,9 +1,11 @@
+@import "src/styles/colors";
+
 .features {
   width: 100%;
 
-  font-family: 'Fester', sans-serif;
+  font-family: 'Fester', Inter, sans-serif;
   font-weight: 800;
-  color: #000000;
+  color: $black;
 
   margin: 40px 0 80px;
 }

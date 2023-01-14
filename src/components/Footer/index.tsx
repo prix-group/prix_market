@@ -79,10 +79,10 @@ export const Footer = () => {
                         &copy; Copyright 2022, Все права защищены
                     </p>
                     <ul className={styles.social}>
-                        <li className={styles.icon}> {/*styles.linkedin}*/}
+                        <li className={styles.icon}>
                             <a target="_blank" href="https://www.linkedin.com/company/prixkz" rel="noreferrer"></a>
                         </li>
-                        <li className={styles.icon}> {/*'instagram'*/}
+                        <li className={styles.icon}>
                             <a target="_blank" href="https://www.instagram.com" rel="noreferrer"></a>
                         </li>
                         <li className={styles.icon}>

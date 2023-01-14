@@ -1,0 +1,101 @@
+.advantages {
+  height: 600px;
+  width: 100%;
+
+  margin: 0 auto;
+  padding: 40px 0;
+
+  background-color: #ffffff;
+
+  color: #000000;
+  font-family: Fester, Inter,sans-serif;
+
+  &--grey {
+    background-color: #F7F7F7;
+  }
+}
+
+.wrapper {
+  width: 80%;
+  margin: 40px auto;
+
+  display: flex;
+  justify-content: space-around;
+
+  &--flexReverse {
+    flex-direction: row-reverse;
+  }
+}
+
+.imageContainer {
+  width: 520px;
+  height: 520px;
+
+  background-color: #f7ca60;
+  border-radius: 600px;
+
+  display: flex;
+  justify-content: center;
+
+  &--transparent {
+    background-color: transparent;
+  }
+}
+
+.image {
+  scale: 1.1;
+
+  width: 600px;
+  height: 100%;
+}
+
+.info {
+  font-family: 'Fester', sans-serif;
+  font-weight: bolder;
+  width: 40%;
+}
+
+.title {
+  width: 100%;
+  font-size: 55px;
+  /*color: #f7ca60;*/
+
+  margin: 0 0 30px;
+  font-weight: 400;
+}
+
+.subtitle {
+  width: 100%;
+  font-size: 17px;
+  line-height: 2rem;
+  margin: 0 0 32px;
+  font-weight: 800;
+}
+
+.text {
+  width: 100%;
+  font-size: 18px;
+  font-weight: lighter;
+  line-height: 2rem;
+  color: #000000;
+  filter: brightness(87%);
+}
+
+.link {
+  display: inline-block;
+
+  padding: 10px;
+
+  border: 1px solid #000000;
+  border-radius: 15px;
+  color: #000000;
+  text-decoration: none;
+
+  transition:  all .1s ease-in-out;
+
+  &:hover {
+    border-color: #c2c2c2;
+    color: white;
+    background-color: #c2c2c2;
+  }
+}

@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'Fester';
+  src: url("../../../public/fonts/Fester/Fester_Regular.woff");
+}
+
+.intro {
+  background-image: url("/images/intro.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+
+  padding: 50px 0 50px;
+}
+
+.wrapper {
+  display: flex;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.content { //TODO: ЧТО ТУТ ДЕЛАТЬ БЛЯТЬ КОНТЕНТ
+  font-family: 'Fester', sans-serif;
+  font-weight: 800;
+
+  color: #FFFFFF;
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+.title {
+  margin: 20px 0;
+
+  font-weight: 600;
+  font-size: 76px;
+}
+
+.subtitle {
+  font-weight: 400;
+  font-size: 36px;
+
+  margin: 10px 0;
+}
+
+.image {
+  width: 50%;
+
+  position: relative;
+  left: 40px;
+
+  scale: 1.2;
+}

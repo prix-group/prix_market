@@ -1,0 +1,102 @@
+@import "../../styles/colors";
+
+.advantages {
+  height: 600px;
+  width: 100%;
+
+  margin: 0 auto;
+  padding: 40px 0;
+
+  background-color: $white;
+
+  color: $black;
+  font-family: Fester, Inter,sans-serif;
+
+  &--grey {
+    background-color: $light-gray-advantages;
+  }
+}
+
+.wrapper {
+  width: 80%;
+  margin: 40px auto;
+
+  display: flex;
+  justify-content: space-around;
+
+  &--flexReverse {
+    flex-direction: row-reverse;
+  }
+}
+
+.imageContainer {
+  width: 520px;
+  height: 520px;
+
+  background-color: $orange-advantages;
+  border-radius: 600px;
+
+  display: flex;
+  justify-content: center;
+
+  &--transparent {
+    background-color: transparent;
+  }
+}
+
+.image {
+  scale: 1.1;
+
+  width: 600px;
+  height: 100%;
+}
+
+.info {
+  font-family: 'Fester', Inter, sans-serif;
+  font-weight: bolder;
+  width: 40%;
+}
+
+.title {
+  width: 100%;
+  font-size: 55px;
+
+  margin: 0 0 30px;
+  font-weight: 400;
+}
+
+.subtitle {
+  width: 100%;
+  font-size: 17px;
+  line-height: 2rem;
+  margin: 0 0 32px;
+  font-weight: 800;
+}
+
+.text {
+  width: 100%;
+  font-size: 18px;
+  font-weight: lighter;
+  line-height: 2rem;
+  color: $black;
+  filter: brightness(87%);
+}
+
+.link {
+  display: inline-block;
+
+  padding: 10px;
+
+  border: 1px solid $black;
+  border-radius: 15px;
+  color: $black;
+  text-decoration: none;
+
+  transition:  all .1s ease-in-out;
+
+  &:hover {
+    border-color: $gray-advantages;
+    color: $black;
+    background-color: $gray-advantages;
+  }
+}

@@ -1,0 +1,42 @@
+@import "src/styles/colors";
+
+.intro {
+  background-image: url("../../../public/images/intro.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+
+  font-family: Fester, Inter, sans-serif;
+  color: $white;
+
+  padding: 50px 0 50px;
+}
+
+.wrapper {
+  display: flex;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.title {
+  margin: 20px 0;
+
+  font-weight: 600;
+  font-size: 76px;
+}
+
+.subtitle {
+  font-weight: 400;
+  font-size: 36px;
+
+  margin: 10px 0;
+}
+
+.image {
+  width: 50%;
+
+  position: relative;
+  left: 40px;
+
+  scale: 1.2;
+}

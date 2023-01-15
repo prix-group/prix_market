@@ -1,0 +1,36 @@
+@import "/src/styles/colors";
+
+.list {
+  list-style: none;
+  padding: 0 0 0 48px;
+}
+
+.member {
+  position: relative;
+}
+
+.heading {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0 0 10px;
+  color: $prix;
+}
+
+.text {
+  font-size: 16px;
+  font-weight: 200;
+  margin: 0 0 20px;
+  line-height: 22px;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+
+  position: absolute;
+  left: -3rem;
+}
+
+.iconSVG {
+  width: 100%;
+}

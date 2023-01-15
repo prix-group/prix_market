@@ -1,0 +1,19 @@
+@import "src/styles/colors";
+
+.features {
+  width: 100%;
+
+  font-family: 'Fester', Inter, sans-serif;
+  font-weight: 800;
+  color: $black;
+
+  margin: 40px 0 80px;
+}
+
+.cards {
+  width: 80%;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-around;
+}

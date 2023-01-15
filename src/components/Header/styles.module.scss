@@ -1,0 +1,49 @@
+@import "src/styles/colors";
+
+.header {
+  background-color: $prix-header;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+  width: calc(100% - 80px);
+
+  margin: 0 auto;
+
+  font-family: Fester, Inter, sans-serif;
+  font-size: 16px;
+  color: $white;
+}
+
+.logo {
+  color: $white;
+  font-size: 60px;
+
+  margin: 0;
+
+  object-fit: contain;
+  width: 100px;
+}
+
+.navigation {
+  &--list {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    width: 500px;
+    padding: 24px;
+  }
+
+  &--item {
+    font-size: 18px;
+    transition: scale .2s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      scale: 1.05;
+    }
+  }
+}

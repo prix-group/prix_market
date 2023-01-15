@@ -3,7 +3,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head >
-          <title>Prix</title>
+          <title>Prix - сервис покупки авто из-за границы</title>
       </Head>
       <body>
         <Main />

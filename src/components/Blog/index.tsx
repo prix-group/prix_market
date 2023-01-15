@@ -1,8 +1,9 @@
 import styles from "./styles.module.scss"
 import rightPic from "../../../public/images/mercedesE63SW213.jpg"
 import leftPic from "../../../public/images/bmwf90m5.jpg"
+import {FC} from "react";
 
-export const Blog = () => {
+export const Blog: FC = () => {
     return (
         <section className={styles.blog}>
             <div className={styles.wrapper}>

@@ -1,16 +1,16 @@
 import styles from "./styles.module.scss"
+import {FC} from "react";
 
-export const Footer = () => {
+export const Footer: FC = () => {
     return (
         <footer className={styles.footer}>
             <section className={styles.wrapper}>
                 <div className={styles.flex}>
-                    <div className={styles.holding_info}>
-                        <p className={styles.title}>
-                            {/*<img src="images/prixlogo.png" alt='logo' style="width: 40px; margin-right: 20px"/>*/}
+                    <div className={styles.holdingInfo}>
+                        <p className={styles['holdingInfo--title']}>
                             ТОО "PRIX.KZ"
                         </p>
-                        <p className={styles.description}>
+                        <p className={styles['holdingInfo--description']}>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                             Adipisci cumque distinctio doloribus illo illum inventore
                             quod saepe. Et laudantium maiores natus nihil sint voluptate,
@@ -19,7 +19,7 @@ export const Footer = () => {
                     </div>
                     <div className={styles.lists}>
                         <div className="footer__company">
-                            <p className={styles.list_title}>
+                            <p className={styles['list--title']}>
                                 Компания
                             </p>
                             <ul className={styles.list}>
@@ -41,7 +41,7 @@ export const Footer = () => {
                             </ul>
                         </div>
                         <div className="footer__company">
-                            <p className={styles.list_title}>
+                            <p className={styles['list--title']}>
                                 Справка
                             </p>
                             <ul className={styles.list}>
@@ -54,7 +54,7 @@ export const Footer = () => {
                             </ul>
                         </div>
                         <div className="footer__company">
-                            <p className={styles.list_title}>
+                            <p className={styles['list--title']}>
                                 Ресурсы
                             </p>
                             <ul className={styles.list}>

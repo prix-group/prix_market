@@ -1,5 +1,5 @@
 import styles from './styles.module.scss';
-import { PaymentListContent } from "@/components/PaymentAdvantageList/utils";
+import { PaymentListContent } from "@/components/PaymentAdvantageList/constants";
 
 export const PaymentAdvantageList = () => {
     return (

@@ -28,20 +28,22 @@
   width: 100px;
 }
 
-.navigation_list {
-  display: flex;
-  justify-content: space-around;
-  list-style: none;
-  width: 500px;
-  padding: 24px;
-}
+.navigation {
+  &--list {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    width: 500px;
+    padding: 24px;
+  }
 
-.navigation_item {
-  font-size: 18px;
-  transition: scale .2s ease-in-out;
+  &--item {
+    font-size: 18px;
+    transition: scale .2s ease-in-out;
 
-  &:hover {
-    cursor: pointer;
-    scale: 1.05;
+    &:hover {
+      cursor: pointer;
+      scale: 1.05;
+    }
   }
 }

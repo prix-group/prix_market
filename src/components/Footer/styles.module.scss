@@ -18,37 +18,20 @@
   margin: 0 0 40px
 }
 
-.holding_info {
+.holdingInfo {
   width: 30%;
-}
 
-.holding_info .title {
-  display: flex;
-  align-items: center;
-  font-weight: 400;
-}
+  &--title {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+  }
 
-.holding_info .description {
-  font-weight: 200;
-  font-size: 14px;
-  line-height: 1.5rem;
-}
-
-.footer__holding-info .button {
-  border: none;
-  border-radius: 15px;
-  padding: 7px 20px;
-
-  background-color: $prix;
-  color: $white;
-  cursor: pointer;
-
-  transition: all .2s ease-in-out;
-}
-
-.footer__holding-info .button:hover {
-  background-color: $prix-sat;
-  scale: 1.03;
+  &--description {
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 1.5rem;
+  }
 }
 
 .lists {
@@ -58,18 +41,18 @@
   justify-content: space-between;
 }
 
-.list_title {
-  font-weight: 600;
-  font-size: 18px;
-  text-decoration: underline;
-  margin: 0 0 30px;
-  cursor: default;
-}
-
 .list {
   list-style: none;
   padding: 0;
   font-weight: 200;
+
+  &--title {
+    font-weight: 600;
+    font-size: 18px;
+    text-decoration: underline;
+    margin: 0 0 30px;
+    cursor: default;
+  }
 }
 
 .link {
@@ -101,7 +84,7 @@
   list-style: none;
 }
 
-.social .icon {
+.icon {
   width: 35px;
   height: 35px;
   border: 1px solid black;
@@ -114,93 +97,7 @@
     background-color: $gray-blog;
   }
 }
-
-//.footer__social .linkedin   {
-//  background-image: url("../../images/linkedin-svgrepo-com.svg");
-//  background-size: 70%;
-//  background-repeat: no-repeat;
-//  background-position: center;
-//}
-
-//.footer__social .instagram {
-//  background-image: url("../../images/instagram-svgrepo-com.svg");
-//  background-size: 55%;
-//  background-repeat: no-repeat;
-//  background-position: center;
-//}
-//
-//.footer__social .facebook {
-//  background-image: url("../../images/facebook-svgrepo-com.svg");
-//  background-size: 70%;
-//  background-repeat: no-repeat;
-//  background-position: center;
-//}
-//
-//.footer__social .github {
-//  background-image: url("../../images/github-svgrepo-com.svg");
-//  background-size: 70%;
-//  background-repeat: no-repeat;
-//  background-position: center;
-//}
-
 .anchor {
   text-decoration: none;
   color: black
-}
-
-@media screen and (max-width: 420px) {
-  .footer {
-
-  }
-
-  .footer__wrapper {
-    width: 95%;
-  }
-
-  .footer__flex {
-    display: block;
-  }
-
-  .footer__holding-info {
-    width: 100%;
-    margin: 0 0 20px;
-    padding: 10px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    box-sizing: border-box;
-  }
-
-  .footer__holding-info .title {
-    margin: 0;
-  }
-
-  .footer__holding-info .button {
-    width: 90%;
-    height: 40px;
-  }
-
-  .footer__lists {
-    font-size: 14px;
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .footer__company:first-of-type {
-    text-align: start;
-  }
-
-  .footer__company {
-    text-align: center;
-  }
-
-  .footer__company:last-of-type {
-    text-align: right;
-  }
-
-  .footer__list-title {
-    text-align: center;
-  }
 }

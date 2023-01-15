@@ -1,8 +1,7 @@
 import styles from "./styles.module.scss"
 import {FC} from "react";
-import {JSXElement} from "@typescript-eslint/types/dist/generated/ast-spec";
 
-interface FeatureCard {
+interface IFeatureCard {
     id: string,
     src: string,
     alt: string,
@@ -10,7 +9,7 @@ interface FeatureCard {
     text: string
 }
 
-export const FeatureCard = ({ id, src, alt, title, text } : FeatureCard) => {
+export const FeatureCard: FC<IFeatureCard> = ({ id, src, alt, title, text }) => {
     return (
         <div className={styles.card} id={id}>
             <div className={styles.imageContainer}>

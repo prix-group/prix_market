@@ -1,4 +1,4 @@
-import '../styles/fonts.module.scss'
+import '../styles/fonts.scss'
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 import { Header } from "@/components/Header";

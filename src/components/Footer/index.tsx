@@ -1,5 +1,6 @@
 import styles from "./styles.module.scss"
 import {FC} from "react";
+import { snListContent, footerListContent } from "@/components/Footer/constants";
 
 export const Footer: FC = () => {
     return (
@@ -8,7 +9,7 @@ export const Footer: FC = () => {
                 <div className={styles.flex}>
                     <div className={styles.holdingInfo}>
                         <p className={styles['holdingInfo--title']}>
-                            ТОО "PRIX.KZ"
+                            ТОО `PRIX.KZ`
                         </p>
                         <p className={styles['holdingInfo--description']}>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -18,60 +19,26 @@ export const Footer: FC = () => {
                         </p>
                     </div>
                     <div className={styles.lists}>
-                        <div className="footer__company">
-                            <p className={styles['list--title']}>
-                                Компания
-                            </p>
-                            <ul className={styles.list}>
-                                <li className={styles.link}>
-                                    <a href="#" className={styles.anchor}>
-                                        О Нас
-                                    </a>
-                                </li>
-                                <li className={styles.link}>
-                                    <a href="#" className={styles.anchor}>
-                                        Преимущества
-                                    </a>
-                                </li>
-                                <li className={styles.link}>
-                                    <a href="#" className={styles.anchor}>
-                                        Миссия
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="footer__company">
-                            <p className={styles['list--title']}>
-                                Справка
-                            </p>
-                            <ul className={styles.list}>
-                                <li className={styles.link}>
-                                    <a href="#" className={styles.anchor}>Служба Поддержки</a>
-                                </li>
-                                <li className={styles.link}>
-                                    <a href="#" className={styles.anchor}>Конфиденциальность</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="footer__company">
-                            <p className={styles['list--title']}>
-                                Ресурсы
-                            </p>
-                            <ul className={styles.list}>
-                                <li className={styles.link}>
-                                    <a href="#" className={styles.anchor}>FAQ</a>
-                                </li>
-                                <li className={styles.link}>
-                                    <a href="#" className={styles.anchor}>YouTube</a>
-                                </li>
-                                <li className={styles.link}>
-                                    <a href="#" className={styles.anchor}>How-to Blog</a>
-                                </li>
-                                <li className={styles.link}>
-                                    <a href="#" className={styles.anchor}>Развитие</a>
-                                </li>
-                            </ul>
-                        </div>
+                        { footerListContent.map(item => {
+                            return (
+                                <div className="footer__company" key={item.id}>
+                                    <p className={styles['list--title']}>
+                                        {item.title}
+                                    </p>
+                                    <ul className={styles.list}>
+                                        {item.list.map(item => {
+                                            return (
+                                                <li className={styles.link} key={item.id}>
+                                                    <a href={item.url} className={styles.anchor}>
+                                                        {item.title}
+                                                    </a>
+                                                </li>
+                                            )
+                                        })}
+                                    </ul>
+                                </div>
+                            )
+                        }) }
                     </div>
                 </div>
                 <div className={styles.bottom}>
@@ -79,18 +46,19 @@ export const Footer: FC = () => {
                         &copy; Copyright 2022, Все права защищены
                     </p>
                     <ul className={styles.social}>
-                        <li className={styles.icon}>
-                            <a target="_blank" href="https://www.linkedin.com/company/prixkz" rel="noreferrer"></a>
-                        </li>
-                        <li className={styles.icon}>
-                            <a target="_blank" href="https://www.instagram.com" rel="noreferrer"></a>
-                        </li>
-                        <li className={styles.icon}>
-                            <a target="_blank" href="https://www.facebook.com" rel="noreferrer"></a>
-                        </li>
-                        <li className={styles.icon}>
-                            <a target="_blank" href="https://www.github.io" rel="noreferrer"></a>
-                        </li>
+                        { snListContent.map( (item) => {
+                            return (
+                                <li className={styles['social--icon']} key={item.name}>
+                                    <a className={styles['social--anchor']} target="_blank" href={item.url} rel="noreferrer">
+                                        <img
+                                            className={styles['social--image']}
+                                            src={item.image.src}
+                                            alt={item.alt}
+                                        />
+                                    </a>
+                                </li>
+                            )
+                        })}
                     </ul>
                 </div>
             </section>

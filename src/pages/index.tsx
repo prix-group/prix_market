@@ -4,7 +4,7 @@ import {Intro} from "@/components/Intro";
 import {Blog} from "@/components/Blog";
 import {Features} from "@/components/Features";
 import {Advantage} from "@/components/Advantage";
-import {advantageContent} from "@/components/Advantage/utils";
+import {advantageContent} from "@/components/Advantage/constants";
 
 export default function Home() {
   return (

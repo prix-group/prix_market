@@ -18,7 +18,7 @@ export const Blog: FC = () => {
                         <div className={styles.imageContainer}>
                             <img alt="blog image" className={styles.image} src={leftPic.src} />
                         </div>
-                        <p className={styles.image}>
+                        <p className={styles.cite}>
                             Декабрь, 2022.
                         </p>
                         <p className={styles.description}>

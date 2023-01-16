@@ -4,6 +4,8 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  box-sizing: border-box;
+  padding: 100px 0;
 }
 
 .wrapper {
@@ -90,5 +92,60 @@
 
   &:hover {
     color: $prix-dark;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .blog {
+    //display: none;
+    padding: 50px 0;
+  }
+
+  .wrapper {
+    width: 95%;
+    margin: 0;
+  }
+
+  .title {
+    width: 100%;
+
+    font-size: 28px
+  }
+
+  .subtitle {
+    width: 100%;
+
+    font-size: 18px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .item {
+    width: 100%;
+
+    &:first-of-type {
+      margin-bottom: 50px;
+    }
+  }
+
+  .imageContainer {
+    max-height: 250px;
+  }
+
+  .image {
+    object-fit: cover;
+  }
+
+  .cite {
+    margin: 5px 0;
+    padding: 0 0 0 20px;
+  }
+
+  .description {
+    text-align: center;
+    margin: 10px 0;
+    padding: 0 20px;
   }
 }

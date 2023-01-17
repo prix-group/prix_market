@@ -50,8 +50,8 @@ export const Advantage: FC<IAdvantage> = ({ type, flexReverse, title, subtitle, 
                     { handleContentSwitch(type) }
                 </div>
                 <div className={cn(
-                    styles['imageContainer'],
-                    {[styles['imageContainer--transparent']]: type !== 'partners'}
+                    styles['image-container'],
+                    {[styles['image-container--transparent']]: type !== 'partners'}
                 )}>
                     <img className={styles.image} src={image} alt={image}/>
                 </div>

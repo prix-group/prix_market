@@ -2,6 +2,12 @@
 
 .header {
   background-color: $prix-header;
+  position: relative;
+
+  &--white {
+    background-color: $white;
+    border-bottom: 2px solid $prix-header;
+  }
 }
 
 .content {
@@ -27,6 +33,44 @@
 
   object-fit: contain;
   width: 100px;
+
+  &--white {
+    color: $prix-header;
+  }
+}
+
+.menu-burger-button {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  transform: translateY(7px);
+
+  border: none;
+
+  background-position: center;
+  background-size: contain;
+  background-color: transparent;
+
+  transition: all .2s ease-in-out;
+
+  &:active {
+    scale: 0.95;
+    opacity: .7;
+  }
+
+  &-open {
+    background-image: url("../../../public/images/menu-burger-horizontal-svgrepo-com .svg");
+  }
+
+  &-close {
+    background-image: url("../../../public/images/cancel-close-svgrepo-com.svg");
+    width: 30px;
+    height: 30px;
+
+    opacity: .7;
+  }
 }
 
 .navigation {
@@ -56,9 +100,15 @@
 
   .content {
     width: 95%;
+    align-items: center;
+    padding: 0 15px;
   }
 
   .navigation {
     display: none;
+  }
+
+  .menu-burger-button {
+    display: block;
   }
 }

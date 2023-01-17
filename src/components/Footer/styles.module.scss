@@ -18,7 +18,7 @@
   margin: 0 0 40px
 }
 
-.holdingInfo {
+.holding-info {
   max-width: 30%;
 
   &--title {
@@ -77,44 +77,6 @@
   font-size: 14px;
 }
 
-.social {
-  display: flex;
-  width: 200px;
-  justify-content: space-between;
-  list-style: none;
-
-  &--icon {
-    width: 35px;
-    height: 35px;
-
-    border: 1px solid black;
-    border-radius: 15px;
-
-    overflow: hidden;
-
-    transition: all .1s ease-in-out;
-
-    &:hover {
-      scale: 1.05;
-      background-color: $gray-advantages;
-    }
-  }
-
-  &--anchor {
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-
-  &--image {
-    width: 70%;
-  }
-}
-
 .anchor {
   width: 100%;
   height: 100%;
@@ -132,7 +94,7 @@
     flex-direction: column;
   }
 
-  .holdingInfo {
+  .holding-info {
     max-width: 100%;
   }
 
@@ -142,7 +104,6 @@
   }
 
   .list {
-
     &--title:nth-of-type(2n) {
       text-align: center;
       color: blue;
@@ -151,12 +112,6 @@
 
   .bottom {
     flex-direction: column-reverse;
-  }
-
-  .social {
-    width: 100%;
-    justify-content: space-around;
-    padding: 0;
   }
 
   .copyright {

@@ -6,6 +6,7 @@ import {Features} from "@/components/Features";
 import {Advantage} from "@/components/Advantage";
 import {advantageContent} from "@/components/Advantage/constants";
 import {Community} from "@/components/Community";
+import {useState} from "react";
 
 export default function Home() {
   return (

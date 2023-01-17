@@ -34,3 +34,16 @@
 .iconSVG {
   width: 100%;
 }
+
+@media screen and (max-width: 420px) {
+  .list {
+    text-align: left;
+  }
+
+  .icon {
+    width: 25px;
+    height: 25px;
+    left: -2.2rem;
+    top: .2rem;
+  }
+}

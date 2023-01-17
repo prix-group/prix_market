@@ -1,17 +1,18 @@
 import styles from "./styles.module.scss"
 import {FC} from "react";
-import { snListContent, footerListContent } from "@/components/Footer/constants";
+import { footerListContent } from "@/components/Footer/constants";
+import {SocialNetworks} from "@/components/SocialNetworks";
 
 export const Footer: FC = () => {
     return (
         <footer className={styles.footer}>
             <section className={styles.wrapper}>
                 <div className={styles.flex}>
-                    <div className={styles.holdingInfo}>
-                        <p className={styles['holdingInfo--title']}>
+                    <div className={styles['holding-info']}>
+                        <p className={styles['holding-info--title']}>
                             ТОО `PRIX.KZ`
                         </p>
-                        <p className={styles['holdingInfo--description']}>
+                        <p className={styles['holding-info--description']}>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                             Adipisci cumque distinctio doloribus illo illum inventore
                             quod saepe. Et laudantium maiores natus nihil sint voluptate,
@@ -45,21 +46,7 @@ export const Footer: FC = () => {
                     <p className={styles.copyright}>
                         &copy; Copyright 2022, Все права защищены
                     </p>
-                    <ul className={styles.social}>
-                        { snListContent.map( (item) => {
-                            return (
-                                <li className={styles['social--icon']} key={item.name}>
-                                    <a className={styles['social--anchor']} target="_blank" href={item.url} rel="noreferrer">
-                                        <img
-                                            className={styles['social--image']}
-                                            src={item.image.src}
-                                            alt={item.alt}
-                                        />
-                                    </a>
-                                </li>
-                            )
-                        })}
-                    </ul>
+                    <SocialNetworks />
                 </div>
             </section>
         </footer>

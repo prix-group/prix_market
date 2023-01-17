@@ -1,7 +1,7 @@
 @import "../../styles/colors";
 
 .advantages {
-  height: 600px;
+  min-height: 600px;
   width: 100%;
 
   margin: 0 auto;
@@ -29,7 +29,7 @@
   }
 }
 
-.imageContainer {
+.image-container {
   width: 520px;
   height: 520px;
 
@@ -98,5 +98,43 @@
     border-color: $gray-advantages;
     color: $black;
     background-color: $gray-advantages;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .wrapper {
+    width: 95%;
+    flex-direction: column;
+  }
+
+  .info {
+    width: 100%;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 36px;
+    font-weight: 800;
+  }
+
+  .subtitle {
+    width: 100%;
+    font-weight: 600;
+  }
+
+  .text {
+    width: 100%;
+  }
+
+  .image-container {
+    width: 100%;
+    height: 200px;
+    margin: 40px 0 0;
+    overflow: hidden;
+  }
+
+  .image {
+    object-fit: contain;
+    max-width: 100%;
   }
 }

@@ -7,7 +7,7 @@
 }
 
 .wrapper {
-  width: 80%;
+  max-width: 80%;
   margin: 0 auto;
   padding: 30px 0;
 }
@@ -18,8 +18,8 @@
   margin: 0 0 40px
 }
 
-.holdingInfo {
-  width: 30%;
+.holding-info {
+  max-width: 30%;
 
   &--title {
     display: flex;
@@ -77,48 +77,44 @@
   font-size: 14px;
 }
 
-.social {
-  display: flex;
-  width: 200px;
-  justify-content: space-between;
-  list-style: none;
-
-  &--icon {
-    width: 35px;
-    height: 35px;
-
-    border: 1px solid black;
-    border-radius: 15px;
-
-    overflow: hidden;
-
-    transition: all .1s ease-in-out;
-
-    &:hover {
-      scale: 1.05;
-      background-color: $gray-advantages;
-    }
-  }
-
-  &--anchor {
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-
-  &--image {
-    width: 70%;
-  }
-}
-
 .anchor {
   width: 100%;
   height: 100%;
 
   text-decoration: none;
   color: black
+}
+
+@media screen and (max-width: 420px) {
+  .wrapper {
+    max-width: 90%;
+  }
+
+  .flex {
+    flex-direction: column;
+  }
+
+  .holding-info {
+    max-width: 100%;
+  }
+
+  .lists {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .list {
+    &--title:nth-of-type(2n) {
+      text-align: center;
+      color: blue;
+    }
+  }
+
+  .bottom {
+    flex-direction: column-reverse;
+  }
+
+  .copyright {
+    text-align: center;
+  }
 }

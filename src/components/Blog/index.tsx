@@ -15,10 +15,10 @@ export const Blog: FC = () => {
                 </h3>
                 <div className={styles.container}>
                     <div className={styles.item}>
-                        <div className={styles.imageContainer}>
+                        <div className={styles['image-container']}>
                             <img alt="blog image" className={styles.image} src={leftPic.src} />
                         </div>
-                        <p className={styles.image}>
+                        <p className={styles.cite}>
                             Декабрь, 2022.
                         </p>
                         <p className={styles.description}>
@@ -27,7 +27,7 @@ export const Blog: FC = () => {
                         <a href="#" className={styles.link}>Узнать подробнее &#10548;</a>
                     </div>
                     <div className={styles.item}>
-                        <div className={styles.imageContainer}>
+                        <div className={styles['image-container']}>
                             <img alt="news image" className={styles.image} src={rightPic.src} />
                         </div>
                         <p className={styles.cite}>

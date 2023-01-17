@@ -1,0 +1,158 @@
+@import "../../styles/colors";
+
+.community {
+  width: 100%;
+
+  background-image: url("../../../public/images/yellow-background-circles.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+
+  padding: 100px 0 50px;
+}
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: 'Fester', Inter, sans-serif;
+  font-weight: 800;
+  text-align: center;
+}
+
+.title {
+  width: 500px;
+  font-size: 36px;
+}
+
+.title .prix {
+  color: $prix;
+  font-size: 43px;
+  font-weight: bolder;
+}
+
+.subtitle {
+  width: 500px;
+  margin: 25px 0;
+
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.form {
+  width: 400px;
+  background-color: $white;
+
+  border: none;
+  border-radius: 15px;
+}
+
+.fieldset {
+  display: flex;
+  height: 50px;
+  border: none;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 10px;
+}
+
+.input {
+  padding-left: 10px;
+
+  border: none;
+  outline: none;
+}
+
+.button {
+  width: 30%;
+  height: 100%;
+  background-color: $black;
+  color: $white;
+
+  font-family: Fester, Inter, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+
+  border: none;
+  border-radius: 8px;
+
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    opacity: .8;
+  }
+}
+
+.note {
+  font-weight: 200;
+  color: $gray-blog;
+
+  filter: brightness(60%);
+}
+
+@media screen and (max-width: 420px) {
+  .community {
+    margin: 30px 0 0;
+    padding: 40px 0;
+  }
+
+  .wrapper {
+    width: 95%;
+    display: block;
+  }
+
+  .title {
+    font-size: 32px;
+    max-width: 100%;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  .form {
+    max-width: 100%;
+    background-color: transparent;
+  }
+
+  .fieldset {
+    flex-direction: column;
+    height: 120px;
+  }
+
+  .inputLabel {
+    width: 100%;
+    height: 40px;
+  }
+
+  .input {
+    width: 90%;
+    height: 100%;
+    font-size: 20px;
+    border: 1px solid $gray-cards;
+    border-radius: 13px;
+    outline: none;
+  }
+
+  .button {
+    height: 45%;
+    width: 95%;
+    border-radius: 13px;
+    margin: 0;
+
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .note {
+    font-size: 14px;
+  }
+}

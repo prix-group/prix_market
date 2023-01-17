@@ -39,7 +39,7 @@
   }
 }
 
-.menu-burger-button {
+.menu-button {
   display: none;
 
   width: 42px;
@@ -54,22 +54,23 @@
   background-color: transparent;
 
   transition: all .2s ease-in-out;
+  object-fit: contain;
 
   &:active {
     scale: 0.95;
     opacity: .7;
   }
 
-  &-open {
-    background-image: url("../../../public/images/menu-burger-horizontal-svgrepo-com .svg");
-  }
-
   &-close {
-    background-image: url("../../../public/images/cancel-close-svgrepo-com.svg");
     width: 30px;
     height: 30px;
 
     opacity: .7;
+  }
+
+  &-icon {
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -108,7 +109,7 @@
     display: none;
   }
 
-  .menu-burger-button {
+  .menu-button {
     display: block;
   }
 }

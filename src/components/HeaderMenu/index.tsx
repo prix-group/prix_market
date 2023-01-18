@@ -1,9 +1,9 @@
 import styles from './styles.module.scss'
-import {FC} from "react";
+import {Dispatch, FC, SetStateAction} from "react";
 import {SocialNetworks} from "@/components/SocialNetworks";
 
 interface IHeaderMenu {
-    setIsOpen: any
+    setIsOpen: Dispatch<SetStateAction<boolean>>;
 }
 
 export const HeaderMenu: FC<IHeaderMenu> = ({ setIsOpen }) => {

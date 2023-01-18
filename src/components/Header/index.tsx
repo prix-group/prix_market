@@ -1,17 +1,22 @@
 import styles from './styles.module.scss';
-import {FC} from "react";
+import {Dispatch, FC, SetStateAction} from "react";
 import cn from 'classnames'
 import {HeaderMenu} from "@/components/HeaderMenu";
 import burgerButtonIcon from '../../../public/images/menu-burger-horizontal-svgrepo-com .svg';
 import closeButtonIcon from '../../../public/images/cancel-close-svgrepo-com.svg';
+import Link from "next/link";
+import {useRouter} from "next/router";
+import {links} from "@/components/Header/constants";
 const bodyScrollLock = require('body-scroll-lock');
 
 interface IHeader {
     isOpen: boolean,
-    setIsOpen: any
+    setIsOpen: Dispatch<SetStateAction<boolean>>
 }
 
 export const Header: FC<IHeader> = ({ isOpen, setIsOpen }) => {
+    const router = useRouter();
+
     const toggleNavMenuOpen = () => {
         if (isOpen) {
             setIsOpen(false);
@@ -28,12 +33,16 @@ export const Header: FC<IHeader> = ({ isOpen, setIsOpen }) => {
             { [styles['header--white']]: isOpen }
         )}>
             <div className={styles.content}>
-                <h1 className={cn(
-                    styles.logo,
-                    { [styles['logo--white']]: isOpen }
-                )}>
-                    prix
-                </h1>
+                <Link
+                    href={'/'}
+                    className={styles.link}>
+                    <h1 className={cn(
+                        styles.logo,
+                        { [styles['logo--white']]: isOpen }
+                    )}>
+                        prix
+                    </h1>
+                </Link>
                 <button
                     className={cn(
                         styles['menu-button'],
@@ -50,9 +59,20 @@ export const Header: FC<IHeader> = ({ isOpen, setIsOpen }) => {
                 { isOpen && <HeaderMenu setIsOpen={toggleNavMenuOpen}/> }
                 <nav className={styles.navigation}>
                     <ul className={styles['navigation__list']}>
-                        <li className={styles['navigation__item']}>О нас</li>
-                        <li className={styles['navigation__item']}>Сотрудничество</li>
-                        <li className={styles['navigation__item']}>Блог</li>
+                        { links.map( item => {
+                            return (
+                                <li className={styles['navigation__item']} key={item.link}>
+                                    <Link
+                                        href={item.link}
+                                        className={cn(
+                                            styles.link,
+                                            {[styles['link--active']]: router.pathname === item.link}
+                                        )}>
+                                        {item.text}
+                                    </Link>
+                                </li>
+                            )
+                        })}
                     </ul>
                 </nav>
             </div>

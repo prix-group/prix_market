@@ -1,5 +1,5 @@
 import styles from './styles.module.scss';
-import {FC} from "react";
+import {Dispatch, FC, SetStateAction} from "react";
 import cn from 'classnames'
 import {HeaderMenu} from "@/components/HeaderMenu";
 import burgerButtonIcon from '../../../public/images/menu-burger-horizontal-svgrepo-com .svg';
@@ -11,7 +11,7 @@ const bodyScrollLock = require('body-scroll-lock');
 
 interface IHeader {
     isOpen: boolean,
-    setIsOpen: Function
+    setIsOpen: Dispatch<SetStateAction<boolean>>
 }
 
 export const Header: FC<IHeader> = ({ isOpen, setIsOpen }) => {

@@ -14,7 +14,7 @@ export const BlogBody = () => {
                     Блог
                 </h1>
                 <p className={styles.routeback} onClick={() => router.back()}>
-                    <span className={styles.arrow}>&#8592;</span> Вернуться на главную
+                    <span className={styles.arrow}>&#8592;</span> Вернуться назад
                 </p>
                 <div className={styles['flex-container']}> {/*TODO: REFACTOR TO GRID CONTAINER*/}
                     { postData.map( item =>

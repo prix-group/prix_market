@@ -1,8 +1,14 @@
-import bmwPic from '../../../public/images/bmwf90m5.jpg'
+import bmwPic from '../../../public/images/bmwf90m5.jpg';
+import mariaPic from '../../../public/images/pexels-maria-orlova-4947408.jpg';
+import rusCarPic from '../../../public/images/pexels-brenner-oliveira-10151838.jpg'
+import harbourPic from '../../../public/images/pexels-chanaka-906494.jpg'
+import truckPic from '../../../public/images/pexels-photoscom-93398.jpg'
+import operatorPic from '../../../public/images/pexels-mart-production-7709208.jpg'
+import hyundaiPic from '../../../public/images/pexels-hyundai-motor-group-15116059.jpg'
 
 export const postData = [
     {
-        image: bmwPic,
+        image: hyundaiPic,
         title: 'Bmw has been awarded as the best car in the world',
         date: '18-10-2023',
         url: '#',
@@ -10,7 +16,7 @@ export const postData = [
         major: true
     },
     {
-        image: bmwPic,
+        image: mariaPic,
         title: 'Bmw has been awarded as the best car in the world',
         date: '18-10-2023',
         url: '#',
@@ -18,7 +24,7 @@ export const postData = [
         major: false
     },
     {
-        image: bmwPic,
+        image: rusCarPic,
         title: 'Bmw has been awarded as the best car in the world',
         date: '18-10-2023',
         url: '#',
@@ -34,7 +40,7 @@ export const postData = [
         major: false
     },
     {
-        image: bmwPic,
+        image: truckPic,
         title: 'Bmw has been awarded as the best car in the world',
         date: '18-10-2023',
         url: '#',
@@ -42,7 +48,7 @@ export const postData = [
         major: false
     },
     {
-        image: bmwPic,
+        image: operatorPic,
         title: 'Bmw has been awarded as the best car in the world',
         date: '18-10-2023',
         url: '#',
@@ -50,7 +56,7 @@ export const postData = [
         major: false
     },
     {
-        image: bmwPic,
+        image: harbourPic,
         title: 'Bmw has been awarded as the best car in the world',
         date: '18-10-2023',
         url: '#',

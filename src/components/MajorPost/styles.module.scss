@@ -1,0 +1,82 @@
+@import "../../styles/colors";
+
+.post {
+  width: 768px;
+  height: 374px;
+
+  margin: 16px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+
+  box-sizing: border-box;
+  border: 4px solid rgb(240, 240, 240, .3);
+  border-radius: 15px;
+
+  overflow: hidden;
+
+  font-family: Fester, Inter, sans-serif;
+  color: $white;
+
+  &:hover {
+    cursor: pointer;
+
+    .image {
+      scale: 1.1;
+    }
+  }
+}
+
+.image {
+  width: 100%;
+  object-fit: contain;
+  object-position: bottom;
+  filter: brightness(.6);
+  transition: all .4s ease-in-out;
+
+  &-container {
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    object-position: center;
+  }
+}
+
+.title {
+  margin: 0;
+  padding: 0 15px;
+  font-size: 42px;
+
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 15px;
+}
+
+.date {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.tag {
+  width: 70px;
+  height: 25px;
+
+  background-color: $prix-sat;
+  border: none;
+  border-radius: 10px;
+
+  text-align: center;
+  font-weight: 600;
+  color: $white;
+
+  transition: all .2s ease-in-out;
+}

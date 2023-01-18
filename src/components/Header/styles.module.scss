@@ -2,7 +2,10 @@
 
 .header {
   background-color: $prix-header;
-  position: relative;
+  position:-webkit-sticky;
+  position:sticky;
+  top:0;
+  z-index: 10;
 
   &--white {
     background-color: $white;
@@ -91,6 +94,16 @@
       cursor: pointer;
       scale: 1.05;
     }
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+
+  &--active {
+    text-decoration: underline;
+    font-weight: 600;
   }
 }
 

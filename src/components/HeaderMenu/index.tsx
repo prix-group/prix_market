@@ -3,7 +3,7 @@ import {FC} from "react";
 import {SocialNetworks} from "@/components/SocialNetworks";
 
 interface IHeaderMenu {
-    setIsOpen: any
+    setIsOpen: Function
 }
 
 export const HeaderMenu: FC<IHeaderMenu> = ({ setIsOpen }) => {

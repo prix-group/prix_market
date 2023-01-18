@@ -1,13 +1,8 @@
 import styles from './styles.module.scss';
 import {FC} from "react";
+import {IPost} from "@/components/Posts/types";
 
-interface IStandardPost {
-    image: string,
-    title: string,
-    date: string,
-}
-
-export const StandardPost: FC<IStandardPost> = ({ image, title, date }) => {
+export const StandardPost: FC<IPost> = ({ image, title, date }) => {
     return (
         <div className={styles.post}>
             <div className={styles['image-container']}>

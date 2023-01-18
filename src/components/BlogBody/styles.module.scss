@@ -9,11 +9,11 @@
 
   font-family: Fester, Inter, sans-serif;
 
-  &--wrapper {
+  &__wrapper {
     max-width: 1200px;
   }
 
-  &--heading {
+  &__heading {
     font-size: 60px;
     font-weight: 800;
     margin: 0;
@@ -38,9 +38,7 @@
   }
 }
 
-.flex {
-  &-container {
-    display: flex;
-    flex-wrap: wrap;
-  }
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
 }

@@ -9,7 +9,7 @@ import hyundaiPic from '../../../public/images/pexels-hyundai-motor-group-151160
 export const postData = [
     {
         image: hyundaiPic,
-        title: 'Bmw has been awarded as the best car in the world',
+        title: 'Hyundai Palisade вернулся в Казахстан с новым дизайном',
         date: '18-10-2023',
         url: '#',
         id: 'post1',
@@ -17,7 +17,7 @@ export const postData = [
     },
     {
         image: mariaPic,
-        title: 'Bmw has been awarded as the best car in the world',
+        title: '«Стабильно тяжелая»: эксперты о ситуации в авторынке Казахстана',
         date: '18-10-2023',
         url: '#',
         id: 'post2',
@@ -25,7 +25,7 @@ export const postData = [
     },
     {
         image: rusCarPic,
-        title: 'Bmw has been awarded as the best car in the world',
+        title: 'Как не остаться без машины и без денег?',
         date: '18-10-2023',
         url: '#',
         id: 'post3',
@@ -33,7 +33,7 @@ export const postData = [
     },
     {
         image: bmwPic,
-        title: 'Bmw has been awarded as the best car in the world',
+        title: 'Компания BMW ввела подписку на опции в авто - как это работает',
         date: '18-10-2023',
         url: '#',
         id: 'post4',
@@ -41,7 +41,7 @@ export const postData = [
     },
     {
         image: truckPic,
-        title: 'Bmw has been awarded as the best car in the world',
+        title: 'Автоперевозки стали еще более надежным способом доставки автомобилей',
         date: '18-10-2023',
         url: '#',
         id: 'post5',
@@ -49,7 +49,7 @@ export const postData = [
     },
     {
         image: operatorPic,
-        title: 'Bmw has been awarded as the best car in the world',
+        title: 'Система клиентских отношений PRIX - революция',
         date: '18-10-2023',
         url: '#',
         id: 'post6',
@@ -57,7 +57,7 @@ export const postData = [
     },
     {
         image: harbourPic,
-        title: 'Bmw has been awarded as the best car in the world',
+        title: 'СРОК ДОСТАВКИ ГРУЗОВ ИЗ ЮЖНОЙ КОРЕИ В КАЗАХСТАН',
         date: '18-10-2023',
         url: '#',
         id: 'post7',

@@ -50,7 +50,11 @@
 }
 
 .title {
+  max-height: 70px;
   padding: 0 15px;
+  text-overflow: ellipsis;
+  white-space: pre-wrap;
+  overflow: initial;
 }
 
 .flex-container {

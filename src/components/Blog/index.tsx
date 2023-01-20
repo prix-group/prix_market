@@ -1,15 +1,18 @@
 import styles from './styles.module.scss';
-import rightPic from '../../../public/images/mercedesE63SW213.jpg';
-import leftPic from '../../../public/images/bmwf90m5.jpg';
+import rightPic from '@public/images/mercedesE63SW213.jpg';
+import leftPic from '@public/images/bmwf90m5.jpg';
 import { FC } from 'react';
+import Link from 'next/link';
 
 export const Blog: FC = () => {
   return (
-    <section className={styles.blog}>
+    <section className={styles.blog} id={'blog-section'}>
       <div className={styles.wrapper}>
-        <h2 className={styles.title}>
-          Читайте блог, чтобы узнавать об обновлениях
-        </h2>
+        <Link href={'/blog'} className={styles.title}>
+          <h2 className={styles.title}>
+            Читайте блог, чтобы узнавать об обновлениях
+          </h2>
+        </Link>
         <h3 className={styles.subtitle}>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat in
           laborum neque perspiciatis vero?

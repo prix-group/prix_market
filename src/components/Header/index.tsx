@@ -1,31 +1,24 @@
 import styles from './styles.module.scss';
-import { Dispatch, FC, SetStateAction } from 'react';
+import { FC, useEffect, useState } from 'react';
 import cn from 'classnames';
 import { HeaderMenu } from '@components/HeaderMenu';
-import burgerButtonIcon from '../../../public/images/menu-burger-horizontal-svgrepo-com .svg';
-import closeButtonIcon from '../../../public/images/cancel-close-svgrepo-com.svg';
+import burgerButtonIcon from '@public/images/menu-burger-horizontal-svgrepo-com .svg';
+import closeButtonIcon from '@public/images/cancel-close-svgrepo-com.svg';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { links } from '@components/Header/constants';
-const bodyScrollLock = require('body-scroll-lock');
 
-interface IHeader {
-  isOpen: boolean;
-  setIsOpen: Dispatch<SetStateAction<boolean>>;
-}
-
-export const Header: FC<IHeader> = ({ isOpen, setIsOpen }) => {
+export const Header: FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
 
-  const toggleNavMenuOpen = () => {
-    if (isOpen) {
-      setIsOpen(false);
-      bodyScrollLock.enableBodyScroll(document);
-    } else {
-      setIsOpen(true);
-      bodyScrollLock.disableBodyScroll(document);
-    }
-  };
+  const toggleNavMenuOpen = () => setIsOpen((isOpen) => !isOpen);
+
+  useEffect(() => {
+    isOpen
+      ? document.body.classList.add('menu-opened')
+      : document.body.classList.remove('menu-opened');
+  }, [isOpen]);
 
   return (
     <header

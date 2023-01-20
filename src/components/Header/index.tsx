@@ -1,12 +1,12 @@
 import styles from './styles.module.scss';
 import { FC, useEffect, useState } from 'react';
 import cn from 'classnames';
-import { HeaderMenu } from '@components/HeaderMenu';
 import burgerButtonIcon from '@public/images/menu-burger-horizontal-svgrepo-com .svg';
 import closeButtonIcon from '@public/images/cancel-close-svgrepo-com.svg';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { links } from '@components/Header/constants';
+import { Menu } from '@components/Menu';
 
 export const Header: FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,14 +22,17 @@ export const Header: FC = () => {
 
   return (
     <header
-      className={cn(styles.header, { [styles['header--white']]: isOpen })}
+      className={cn(styles['header'], { [styles['header--white']]: isOpen })}
     >
-      <div className={styles.content}>
-        <Link href={'/'} className={styles.link}>
-          <h1 className={cn(styles.logo, { [styles['logo--white']]: isOpen })}>
+      <div className={styles['content']}>
+        <Link href={'/'} className={styles['link']}>
+          <h1
+            className={cn(styles['logo'], { [styles['logo--white']]: isOpen })}
+          >
             prix
           </h1>
         </Link>
+
         <button
           className={cn(styles['menu-button'], {
             [styles['menu-button--close']]: isOpen,
@@ -42,15 +45,15 @@ export const Header: FC = () => {
             alt={'button icon'}
           />
         </button>
-        {isOpen && <HeaderMenu setIsOpen={toggleNavMenuOpen} />}
-        <nav className={styles.navigation}>
+
+        <nav className={styles['navigation']}>
           <ul className={styles['navigation__list']}>
             {links.map((item) => {
               return (
                 <li className={styles['navigation__item']} key={item.link}>
                   <Link
                     href={item.link}
-                    className={cn(styles.link, {
+                    className={cn(styles['link'], {
                       [styles['link--active']]: router.pathname === item.link,
                     })}
                   >
@@ -61,6 +64,8 @@ export const Header: FC = () => {
             })}
           </ul>
         </nav>
+
+        {isOpen && <Menu setIsOpen={setIsOpen} />}
       </div>
     </header>
   );

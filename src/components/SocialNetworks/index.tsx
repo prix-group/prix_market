@@ -1,5 +1,5 @@
 import styles from './styles.module.scss';
-import { snListContent } from '@/components/SocialNetworks/constants';
+import { snListContent } from '@components/SocialNetworks/constants';
 
 export const SocialNetworks = () => {
   return (

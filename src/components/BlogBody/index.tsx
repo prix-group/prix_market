@@ -1,7 +1,7 @@
 import styles from './styles.module.scss';
-import { StandardPost } from '@/components/Posts/StandardPost';
-import { postData } from '@/components/BlogBody/constants';
-import { MajorPost } from '@/components/Posts/MajorPost';
+import { StandardPost } from '@components/Posts/StandardPost';
+import { postData } from '@components/BlogBody/constants';
+import { MajorPost } from '@components/Posts/MajorPost';
 import { useRouter } from 'next/router';
 
 export const BlogBody = () => {

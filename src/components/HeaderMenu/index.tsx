@@ -1,6 +1,6 @@
 import styles from './styles.module.scss';
 import { Dispatch, FC, SetStateAction } from 'react';
-import { SocialNetworks } from '@/components/SocialNetworks';
+import { SocialNetworks } from '@components/SocialNetworks';
 
 interface IHeaderMenu {
   setIsOpen: Dispatch<SetStateAction<boolean>>;

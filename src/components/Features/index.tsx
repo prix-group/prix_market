@@ -1,6 +1,6 @@
 import { FeatureCard } from '../FeatureCard';
 import styles from './styles.module.scss';
-import { cardsContent } from '@/components/Features/constants';
+import { cardsContent } from '@components/Features/constants';
 import { FC } from 'react';
 
 export const Features: FC = () => {

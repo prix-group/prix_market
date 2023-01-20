@@ -1,6 +1,6 @@
 import styles from './styles.module.scss';
 import { FC } from 'react';
-import { IPost } from '@/components/Posts/types';
+import { IPost } from '@components/Posts/types';
 
 export const StandardPost: FC<IPost> = ({ image, title, date }) => {
   return (

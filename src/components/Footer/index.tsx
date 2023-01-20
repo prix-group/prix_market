@@ -1,7 +1,7 @@
 import styles from './styles.module.scss';
 import { FC } from 'react';
-import { footerListContent } from '@/components/Footer/constants';
-import { SocialNetworks } from '@/components/SocialNetworks';
+import { footerListContent } from '@components/Footer/constants';
+import { SocialNetworks } from '@components/SocialNetworks';
 
 export const Footer: FC = () => {
   return (

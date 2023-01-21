@@ -12,7 +12,7 @@ export const postData = [
         title: 'Hyundai Palisade вернулся в Казахстан с новым дизайном',
         date: '18-10-2023',
         url: '#',
-        id: 'post1',
+        id: 'post123',
         major: true
     },
     {

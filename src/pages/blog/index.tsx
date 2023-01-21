@@ -1,10 +1,9 @@
-import {BlogBody} from "@/components/BlogBody";
-
+import { BlogBody } from '@components/BlogBody';
 
 export default function Home() {
-    return (
-        <>
-            <BlogBody />
-        </>
-    )
+  return (
+    <>
+      <BlogBody />
+    </>
+  );
 }

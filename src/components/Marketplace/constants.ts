@@ -1,0 +1,55 @@
+import bmwPic from '../../../public/images/bmwf90m5.jpg'
+
+export const carsData = [
+  {
+    image: bmwPic,
+    make: 'BMW',
+    model: '5-series',
+    year: 2022,
+    price: '42 000 000',
+    specs: {
+      type: 'Седан',
+      drive: 'Передний привод',
+      gearbox: 'АКПП',
+      fuel: 'Бензин',
+      volume: '4.4 литра',
+      mileage: '2 000 км',
+    },
+    location: 'Сеул, Корея',
+    id: '1',
+  },
+  {
+    image: bmwPic,
+    make: 'BMW',
+    model: '5-series',
+    year: 2022,
+    price: '42 000 000',
+    specs: {
+      type: 'Седан',
+      drive: 'Передний привод',
+      gearbox: 'АКПП',
+      fuel: 'Бензин',
+      volume: '4.4 литра',
+      mileage: '2 000 км',
+    },
+    location: 'Сеул, Корея',
+    id: '2',
+  },
+  {
+    image: bmwPic,
+    make: 'BMW',
+    model: '5-series',
+    year: 2022,
+    price: '42 000 000',
+    specs: {
+      type: 'Седан',
+      drive: 'Передний привод',
+      gearbox: 'АКПП',
+      fuel: 'Бензин',
+      volume: '4.4 литра',
+      mileage: '2 000 км',
+    },
+    location: 'Сеул, Корея',
+    id: '3',
+  },
+];

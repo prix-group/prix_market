@@ -42,6 +42,11 @@
 
 .image-container {
   height: 400px;
+  display: flex;
+}
+
+.image {
+  object-fit: contain;
 }
 
 .main-text {

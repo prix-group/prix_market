@@ -11,13 +11,13 @@ export const Post = () => {
   return (
     <div className={styles.post}>
       <div className={styles.wrapper}>
-        <p className={styles.routeback} onClick={() => router.back()}>
+        <p className={styles['route-back']} onClick={() => router.back()}>
           <span className={styles.arrow}>&#8592;</span> Вернуться назад
         </p>
-        <h1 className={styles['post__title']}>{postInfo && postInfo.title}</h1>
+        <h1 className={styles['post__title']}>{postInfo?.title}</h1>
         <div className={styles['post__info']}>
           <BlogTag />
-          <p className={styles['post__date']}>{postInfo && postInfo.date}</p>
+          <p className={styles['post__date']}>{postInfo?.date}</p>
         </div>
         <h2 className={styles['post__subtitle']}>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid
@@ -26,7 +26,7 @@ export const Post = () => {
         <div className={styles['image-container']}>
           <img
             className={styles['image']}
-            src={postInfo && postInfo.image.src}
+            src={postInfo?.image.src}
           />
         </div>
         <h3 className={styles['post__subheading']}>

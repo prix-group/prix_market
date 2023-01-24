@@ -1,6 +1,6 @@
 import styles from './styles.module.scss';
 import { PostCard } from '@components/PostCard';
-import { postData } from '@components/BlogBody/constants';
+import { DESKTOP_SIZE, postData } from '@components/BlogBody/constants';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { useWindowSize } from '@/src/customHooks/useWindowSize';
@@ -9,7 +9,7 @@ export const BlogBody = () => {
   const router = useRouter();
   const windowSize = useWindowSize();
 
-  let isDesktop = windowSize.width > 1200;
+  let isDesktop = windowSize.width > DESKTOP_SIZE;
 
   return (
     <div className={styles.blog}>

@@ -1,9 +1,9 @@
 import styles from './styles.module.scss';
 import viewIcon from '../../../public/images/view-icon.svg';
-import { FC } from 'react';
+import React, { FC } from 'react';
 
 interface ICarCard {
-  image: object;
+  image: React.ImgHTMLAttributes<HTMLImageElement>;
   make: string;
   model: string;
   year: number;

@@ -24,12 +24,12 @@ export const Pagination: FC<IPagination> = ({
   return (
     <ul className={styles['pagination']}>
       {pages.map((item, index) => {
-        // eslint-disable-next-line no-return-assign
         return (
           <li
-            className={cn(styles['pagination__page-number'],
-              { [styles['pagination__page-number--active']]: index === currentPage }
-            )}
+            className={cn(styles['pagination__page-number'], {
+              [styles['pagination__page-number--active']]:
+                index === currentPage,
+            })}
             key={index}
             onClick={() => setCurrentPage(item)}
           >

@@ -27,6 +27,7 @@ export const Post = () => {
           <img
             className={styles['image']}
             src={postInfo?.image.src}
+            alt={'image'}
           />
         </div>
         <h3 className={styles['post__subheading']}>

@@ -31,7 +31,6 @@
     gap: 10px 10px
   }
 
-
   &__link {
     text-decoration: none;
     color: $black
@@ -66,13 +65,18 @@
     }
 
     &__content {
-      margin: 25px 0 50px
+      margin: 25px 0 50px;
+      position: relative;
     }
 
     &__grid {
       display: block;
 
       height: auto;
+    }
+
+    &__grid-container {
+      margin: 50px 0;
     }
   }
 

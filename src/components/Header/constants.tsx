@@ -4,6 +4,10 @@ export const links = [
     link: '/about-us',
   },
   {
+    text: 'Автомобили',
+    link: '/market',
+  },
+  {
     text: 'Сотрудничество',
     link: '/partnership',
   },

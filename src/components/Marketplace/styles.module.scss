@@ -1,11 +1,52 @@
 @import "../../styles/colors";
 
 .marketplace {
+  font-family: Fester, Inter, sans-serif;
 
+  &__title {
+    font-size: 38px;
+    padding: 0 0 20px;
+
+    border-bottom: 1px solid $gray-cards;
+  }
+
+  &__content {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+
+    margin: 50px 0 100px;
+  }
+
+  &__filter {
+    width: 250px;
+    min-height: 500px;
+
+    border-radius: 15px;
+    box-sizing: border-box;
+
+    background-color: $light-gray-posts;
+  }
+
+  &__grid {
+    width: 902px;
+    height: 1306px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px 10px
+  }
 
 
   &__link {
     text-decoration: none;
     color: $black
   }
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
 }

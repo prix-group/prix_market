@@ -52,7 +52,11 @@ export const CarCard: FC<ICarCard> = ({
             <p className={styles['car-info__location']}>{location}</p>
             <div className={styles['car-info__views']}>
               <span className={styles['car-info__counter']}>9</span>
-              <img className={styles['car-info__views-icon']} src={viewIcon.src} alt={'view icon'}/>
+              <img
+                className={styles['car-info__views-icon']}
+                src={viewIcon.src}
+                alt={'view icon'}
+              />
             </div>
           </div>
         </div>

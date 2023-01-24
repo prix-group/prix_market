@@ -5,7 +5,6 @@ import { carsData } from '@components/Marketplace/constants';
 import { useWindowSize } from '@/src/customHooks/useWindowSize';
 import { DESKTOP_SIZE } from '@components/BlogBody/constants';
 import { useState } from 'react';
-import { File } from 'next/dist/compiled/@edge-runtime/primitives/fetch';
 import { Filter } from '@components/Filter';
 
 export const Marketplace = () => {

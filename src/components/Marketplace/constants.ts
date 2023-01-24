@@ -1,4 +1,4 @@
-import bmwPic from '../../../public/images/bmwf90m5.jpg'
+import bmwPic from '../../../public/images/bmwf90m5.jpg';
 
 export const carsData = [
   {

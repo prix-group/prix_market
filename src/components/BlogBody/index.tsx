@@ -3,11 +3,11 @@ import { PostCard } from '@components/PostCard';
 import { postData } from '@components/BlogBody/constants';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import { useWindowResize } from '@components/BlogBody/util';
+import { useWindowSize } from '@/src/customHooks/useWindowSize';
 
 export const BlogBody = () => {
   const router = useRouter();
-  const windowSize = useWindowResize();
+  const windowSize = useWindowSize();
 
   let isDesktop = windowSize.width > 1200;
 

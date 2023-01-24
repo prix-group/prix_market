@@ -1,0 +1,15 @@
+@import "../../styles/colors";
+
+.pagination {
+  display: flex;
+  list-style: none;
+
+  &__page-number {
+    margin: 0 20px;
+    border-bottom: 1px solid $light-gray-posts;
+
+    &--active {
+      font-weight: 600;
+    }
+  }
+}

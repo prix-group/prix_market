@@ -1,6 +1,6 @@
 import { BlogBody } from '@components/BlogBody';
 
-export default function Home() {
+export default function PostPage() {
   return (
     <>
       <BlogBody />

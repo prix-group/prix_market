@@ -65,3 +65,5 @@ export const postData = [
     major: true,
   },
 ];
+
+export const DESKTOP_SIZE = 1200;

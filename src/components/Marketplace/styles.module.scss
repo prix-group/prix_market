@@ -17,16 +17,8 @@
     justify-content: space-between;
 
     margin: 50px 0 100px;
-  }
 
-  &__filter {
-    width: 250px;
-    min-height: 500px;
-
-    border-radius: 15px;
-    box-sizing: border-box;
-
-    background-color: $light-gray-posts;
+    position: relative;
   }
 
   &__grid {
@@ -49,4 +41,42 @@
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 420px) {
+  .marketplace {
+
+    &__filter-button {
+      width: 50%;
+
+      margin: 10px auto;
+
+      font-size: 20px;
+      color: $prix-sat;
+      text-align: center;
+
+      border-bottom: 1px solid $prix-sat;
+
+      transition: all .2s ease-in-out;
+
+      &:active {
+        scale: 0.90;
+        filter: brightness(.8);
+      }
+    }
+
+    &__content {
+      margin: 25px 0 50px
+    }
+
+    &__grid {
+      display: block;
+
+      height: auto;
+    }
+  }
+
+  .wrapper {
+    max-width: 95%;
+  }
 }

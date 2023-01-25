@@ -22,8 +22,8 @@
   }
 
   &__grid {
-    width: 902px;
-    height: 1306px;
+    max-width: 902px;
+    max-height: 1306px;
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);

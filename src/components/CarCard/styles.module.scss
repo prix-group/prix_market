@@ -99,7 +99,13 @@
 
 @media screen and (max-width: 420px) {
   .card {
+    width: 100%;
     margin: 0 0 15px;
+  }
+
+  .image-container {
+    max-width: 100%;
+    overflow: hidden;
   }
 
   .car-info {

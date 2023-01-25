@@ -1,23 +1,7 @@
 import styles from './styles.module.scss';
 import viewIcon from '../../../public/images/view-icon.svg';
 import React, { FC } from 'react';
-
-interface ICarCard {
-  image: React.ImgHTMLAttributes<HTMLImageElement>;
-  make: string;
-  model: string;
-  year: number;
-  specs: {
-    type: string;
-    drive: string;
-    gearbox: string;
-    fuel: string;
-    volume: string;
-    mileage: string;
-  };
-  price: string;
-  location: string;
-}
+import { ICarCard } from '@components/CarCard/types';
 
 export const CarCard: FC<ICarCard> = ({
   image,

@@ -3,17 +3,17 @@ import cn from 'classnames';
 import { FC } from 'react';
 
 interface IFilter {
-  isDesktop: boolean;
+  isMobile: boolean;
   isHidden: boolean;
 }
 
-export const Filter: FC<IFilter> = ({ isDesktop, isHidden }) => {
+export const Filter: FC<IFilter> = ({ isMobile, isHidden }) => {
   return (
     <div
       className={cn(
         styles['filter'],
-        { [styles['filter--mobile']]: !isDesktop },
-        { [styles['filter--hidden']]: !isDesktop && isHidden },
+        { [styles['filter--mobile']]: isMobile },
+        { [styles['filter--hidden']]: isMobile && isHidden },
       )}
     >
       <div className={''}>

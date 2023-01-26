@@ -1,9 +1,10 @@
 import styles from './styles.module.scss';
 import { PostCard } from '@components/PostCard';
-import { DESKTOP_SIZE, postData } from '@components/BlogBody/constants';
+import { postData } from '@components/BlogBody/constants';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { useWindowSize } from '@/src/customHooks/useWindowSize';
+import { DESKTOP_SIZE } from '@/src/constants';
 
 export const BlogBody = () => {
   const router = useRouter();

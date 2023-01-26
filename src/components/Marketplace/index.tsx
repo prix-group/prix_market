@@ -14,7 +14,7 @@ export const Marketplace = () => {
   const [currentPage, setCurrentPage] = useState(1);
 
   const handleFilterToggle = () => {
-    setFilterOpen(!filterOpen);
+    setFilterOpen((filterOpen) => !filterOpen);
   };
 
   let lastCardIndex = currentPage * POSTS_PER_PAGE;

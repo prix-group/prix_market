@@ -21,15 +21,15 @@
   }
 }
 
-.image-container {
-  height: 50%;
-  width: 100%;
-
-  overflow: hidden;
-}
-
 .image {
   width: 100%;
+
+  &-container {
+    height: 50%;
+    width: 100%;
+
+    overflow: hidden;
+  }
 }
 
 .car-info {

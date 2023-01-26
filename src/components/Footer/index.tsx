@@ -9,7 +9,9 @@ export const Footer: FC = () => {
       <section className={styles.wrapper}>
         <div className={styles.flex}>
           <div className={styles['holding-info']}>
-            <p className={styles['holding-info--title']}>ТОО `PRIX.KZ`</p>
+            <p className={styles['holding-info--title']}>
+              ТОО &ldquo;PRIX.KZ&ldquo;
+            </p>
             <p className={styles['holding-info--description']}>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci
               cumque distinctio doloribus illo illum inventore quod saepe. Et

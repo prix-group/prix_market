@@ -1,5 +1,5 @@
 import styles from './styles.module.scss';
-import buyCar from '../../../public/images/buycar.png';
+import buyCar from '@public/images/buycar.png';
 
 export const Intro = () => {
   return (

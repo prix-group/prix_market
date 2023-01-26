@@ -1,0 +1,130 @@
+@import "../../styles/colors";
+
+.card {
+  width: 100%;
+  overflow: hidden;
+
+  border: 3px solid rgb(240, 240, 240);
+  box-sizing: border-box;
+  border-radius: 15px;
+
+  display: flex;
+  flex-direction: column;
+
+  font-family: Fester, Inter, sans-serif;
+
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    scale: 1.002;
+    filter: brightness(.8);
+  }
+}
+
+.image {
+  width: 100%;
+
+  &-container {
+    height: 50%;
+    width: 100%;
+
+    overflow: hidden;
+  }
+}
+
+.car-info {
+  margin: 0;
+  padding: 5px 15px;
+
+  &__title {
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0 0 3px;
+  }
+
+  &__age {
+    font-weight: 200;
+  }
+
+  &__price {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  &__specs {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, 1fr);
+
+    font-size: 9px;
+    font-weight: 200;
+
+    margin: 5px 0;
+    padding: 5px 0;
+
+    border-top: 1px solid $light-gray-posts;
+    border-bottom: 1px solid $light-gray-posts;
+  }
+
+  &__spec {
+    margin: 0;
+  }
+
+  &__secondary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+
+    font-size: 12px;
+    font-weight: 200;
+    padding: 0 5px;
+  }
+
+  &__location {
+    margin: 0;
+  }
+
+  &__views {
+    display: flex;
+  }
+
+  &__views-icon {
+    width: 15px;
+    margin-left: 3px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .card {
+    width: 100%;
+    margin: 0 0 15px;
+  }
+
+  .image-container {
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .car-info {
+    height: 50%;
+
+    &__title {
+      font-size: 24px;
+    }
+
+    &__price {
+      font-size: 36px;
+    }
+
+    &__specs {
+      font-size: 18px
+    }
+
+    &__secondary {
+      font-size: 16px;
+    }
+  }
+}

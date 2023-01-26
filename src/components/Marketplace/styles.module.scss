@@ -1,0 +1,86 @@
+@import "../../styles/colors";
+
+.marketplace {
+  font-family: Fester, Inter, sans-serif;
+
+  &__title {
+    font-size: 38px;
+    padding: 0 0 20px;
+
+    border-bottom: 1px solid $gray-cards;
+  }
+
+  &__content {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+
+    margin: 50px 0 100px;
+
+    position: relative;
+  }
+
+  &__grid {
+    max-width: 902px;
+    max-height: 1306px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px 10px
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $black
+  }
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 420px) {
+  .marketplace {
+
+    &__filter-button {
+      width: 50%;
+
+      margin: 10px auto;
+
+      font-size: 20px;
+      color: $prix-sat;
+      text-align: center;
+
+      border-bottom: 1px solid $prix-sat;
+
+      transition: all .2s ease-in-out;
+
+      &:active {
+        scale: 0.90;
+        filter: brightness(.8);
+      }
+    }
+
+    &__content {
+      margin: 25px 0 50px;
+      position: relative;
+    }
+
+    &__grid {
+      display: block;
+
+      height: auto;
+    }
+
+    &__grid-container {
+      margin: 50px 0;
+    }
+  }
+
+  .wrapper {
+    max-width: 95%;
+  }
+}

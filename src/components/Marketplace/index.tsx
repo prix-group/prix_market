@@ -1,25 +1,28 @@
 import styles from './styles.module.scss';
 import { CarCard } from '@components/CarCard';
 import Link from 'next/link';
-import { carsData, POSTS_PER_PAGE } from '@components/Marketplace/constants';
 import { DESKTOP_SIZE } from '@/src/constants';
 import { useWindowSize } from '@/src/customHooks/useWindowSize';
-import { useState } from 'react';
+import { FC, useState } from 'react';
 import { Filter } from '@components/Filter';
 import { Pagination } from '@components/Pagination';
 
-export const Marketplace = () => {
+export const Marketplace: FC = ({ carsData }) => {
   const windowSize = useWindowSize();
   const [filterOpen, setFilterOpen] = useState(false);
-  const [currentPage, setCurrentPage] = useState(1);
+  // const [currentPage, setCurrentPage] = useState(1);
+
+  console.log(carsData);
 
   const handleFilterToggle = () => {
     setFilterOpen((filterOpen) => !filterOpen);
   };
 
-  let lastCardIndex = currentPage * POSTS_PER_PAGE;
-  let firstCardIndex = lastCardIndex - POSTS_PER_PAGE;
-  let carsOnPage = carsData.slice(firstCardIndex, lastCardIndex);
+  console.log('CARS DATA INSIDE MARKETPLACE', carsData);
+
+  // let lastCardIndex = currentPage * POSTS_PER_PAGE;
+  // let firstCardIndex = lastCardIndex - POSTS_PER_PAGE;
+  // let carsOnPage = carsData.slice(firstCardIndex, lastCardIndex);
 
   const isMobile = windowSize.width < DESKTOP_SIZE;
 
@@ -38,7 +41,7 @@ export const Marketplace = () => {
         <div className={styles['marketplace__content']}>
           <Filter isMobile={isMobile} isHidden={!filterOpen} />
           <div className={styles['marketplace__grid']}>
-            {carsOnPage.map((item) => {
+            {carsData.items.map((item) => {
               return (
                 <Link
                   href={'#'}
@@ -59,10 +62,9 @@ export const Marketplace = () => {
             })}
           </div>
           <Pagination
-            totalCards={carsData.length}
+            totalCards={carsData.itemsQty}
             cardsPerPage={12}
-            currentPage={currentPage}
-            setCurrentPage={setCurrentPage}
+            currentPage={carsData.pageNumber}
           />
         </div>
       </div>

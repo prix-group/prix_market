@@ -6,6 +6,7 @@ export const links = [
   {
     text: 'Автомобили',
     link: '/market',
+    page: 1,
   },
   {
     text: 'Сотрудничество',

@@ -52,7 +52,7 @@ export const Header: FC = () => {
               return (
                 <li className={styles['navigation__item']} key={item.link}>
                   <Link
-                    href={item.link}
+                    href={item.link === '/market' ? `/market/${item.page}` : item.link}
                     className={cn(styles['link'], {
                       [styles['link--active']]: router.pathname === item.link,
                     })}

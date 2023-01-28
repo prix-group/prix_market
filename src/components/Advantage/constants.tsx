@@ -1,12 +1,12 @@
-import ewalletPic from '../../../public/images/eWallet.png';
-import partnersPic from '../../../public/images/people.png';
-import navigationPic from '../../../public/images/navigation.png';
+import ewalletPic from '@public/images/eWallet.png';
+import partnersPic from '@public/images/people.png';
+import navigationPic from '@public/images/navigation.png';
 
 export const advantageContent = [
   {
     type: 'payment',
     title: 'Удобная оплата',
-    subtitle: `Команда <span className="prix">Prix.kz </span> безустанно трудится над тем, чтобы процесс оплаты прошел гладко и без проблем`,
+    subtitle: `Команда Prix.kz безустанно трудится над тем, чтобы процесс оплаты прошел гладко и без проблем`,
     text: '',
     flexReverse: false,
     image: ewalletPic,

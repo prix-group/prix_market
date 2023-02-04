@@ -12,7 +12,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <multilangContext.Provider value={translations[lang]}>
       <div className={'container'}>
-        <Header setLang={setLang} lang={lang}/>
+        <Header setLang={setLang} />
         <Component {...pageProps} />
         <Footer />
       </div>

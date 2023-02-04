@@ -1,5 +1,12 @@
 import styles from './styles.module.scss';
-import { FC, useEffect, useState } from 'react';
+import {
+  Dispatch,
+  FC,
+  SetStateAction,
+  useContext,
+  useEffect,
+  useState,
+} from 'react';
 import cn from 'classnames';
 import burgerButtonIcon from '@public/images/menu-burger-horizontal-svgrepo-com .svg';
 import closeButtonIcon from '@public/images/cancel-close-svgrepo-com.svg';
@@ -7,10 +14,17 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { links } from '@components/Header/constants';
 import { Menu } from '@components/Menu';
+import { multilangContext, translations } from '@/src/context/multilangContext';
 
-export const Header: FC = ({ setLang, lang }) => {
+interface IHeader {
+  setLang: Dispatch<SetStateAction<string>>;
+}
+
+export const Header: FC<IHeader> = ({ setLang }) => {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
+
+  const translation = useContext(multilangContext);
 
   const toggleNavMenuOpen = () => setIsOpen((isOpen) => !isOpen);
 
@@ -21,7 +35,7 @@ export const Header: FC = ({ setLang, lang }) => {
   }, [isOpen]);
 
   const handleLanguageSwitch = () => {
-    lang === 'en' ? setLang('ru') : setLang('en');
+    translations?.lang === 'en' ? setLang('ru') : setLang('en');
   };
 
   return (
@@ -61,7 +75,9 @@ export const Header: FC = ({ setLang, lang }) => {
                       [styles['link--active']]: router.pathname === item.link,
                     })}
                   >
-                    {item.text}
+                    {translation?.lang === 'en'
+                      ? item.text.en
+                      : item.text.ru}
                   </Link>
                 </li>
               );
@@ -69,8 +85,11 @@ export const Header: FC = ({ setLang, lang }) => {
           </ul>
         </nav>
         <div className={styles['header__language-button']}>
-          <p className={styles['header__language-content']} onClick={handleLanguageSwitch}>
-            {lang === 'ru' ? 'en' : 'ru'}
+          <p
+            className={styles['header__language-content']}
+            onClick={handleLanguageSwitch}
+          >
+            {translation.lang === 'ru' ? 'en' : 'ру'}
           </p>
         </div>
         {isOpen && <Menu setIsOpen={setIsOpen} />}

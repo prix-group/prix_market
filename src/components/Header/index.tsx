@@ -8,7 +8,7 @@ import { useRouter } from 'next/router';
 import { links } from '@components/Header/constants';
 import { Menu } from '@components/Menu';
 
-export const Header: FC = () => {
+export const Header: FC = ({ setLang, lang }) => {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
 
@@ -19,6 +19,10 @@ export const Header: FC = () => {
       ? document.body.classList.add('menu-opened')
       : document.body.classList.remove('menu-opened');
   }, [isOpen]);
+
+  const handleLanguageSwitch = () => {
+    lang === 'en' ? setLang('ru') : setLang('en');
+  };
 
   return (
     <header
@@ -64,7 +68,11 @@ export const Header: FC = () => {
             })}
           </ul>
         </nav>
-
+        <div className={styles['header__language-button']}>
+          <p className={styles['header__language-content']} onClick={handleLanguageSwitch}>
+            {lang === 'ru' ? 'en' : 'ru'}
+          </p>
+        </div>
         {isOpen && <Menu setIsOpen={setIsOpen} />}
       </div>
     </header>

@@ -20,7 +20,7 @@ export const Menu: FC<IMenu> = ({ setIsOpen }) => {
           {links.map((link, index) => {
             return (
               <li key={index} className={styles['item']} onClick={closeMenu}>
-                {link.text}
+                {link.text['en']}
               </li>
             );
           })}

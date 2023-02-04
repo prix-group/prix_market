@@ -1,5 +1,12 @@
 import styles from './styles.module.scss';
-import { FC, useEffect, useState } from 'react';
+import {
+  Dispatch,
+  FC,
+  SetStateAction,
+  useContext,
+  useEffect,
+  useState,
+} from 'react';
 import cn from 'classnames';
 import burgerButtonIcon from '@public/images/menu-burger-horizontal-svgrepo-com .svg';
 import closeButtonIcon from '@public/images/cancel-close-svgrepo-com.svg';
@@ -7,10 +14,16 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { links } from '@components/Header/constants';
 import { Menu } from '@components/Menu';
+import { IIntroLang, multilangContext } from '@/src/context/multilangContext';
 
-export const Header: FC = () => {
+interface IHeader {
+  setLang: Dispatch<SetStateAction<string>>;
+}
+
+export const Header: FC<IHeader> = ({ setLang }) => {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
+  const translation = useContext(multilangContext) as IIntroLang;
 
   const toggleNavMenuOpen = () => setIsOpen((isOpen) => !isOpen);
 
@@ -19,6 +32,10 @@ export const Header: FC = () => {
       ? document.body.classList.add('menu-opened')
       : document.body.classList.remove('menu-opened');
   }, [isOpen]);
+
+  const handleLanguageSwitch = () => {
+    translation && setLang(translation.lang);
+  };
 
   return (
     <header
@@ -57,14 +74,21 @@ export const Header: FC = () => {
                       [styles['link--active']]: router.pathname === item.link,
                     })}
                   >
-                    {item.text}
+                    {translation?.lang}
                   </Link>
                 </li>
               );
             })}
           </ul>
         </nav>
-
+        <div className={styles['header__language-button']}>
+          <p
+            className={styles['header__language-content']}
+            onClick={handleLanguageSwitch}
+          >
+            {translation?.lang}
+          </p>
+        </div>
         {isOpen && <Menu setIsOpen={setIsOpen} />}
       </div>
     </header>

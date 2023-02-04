@@ -21,7 +21,6 @@ export const Filter: FC<IFilter> = ({ isMobile, isHidden }) => {
           <p className={styles['filter__title']}>Фильтры</p>
           <p className={styles['filter__reset']}>Сбросить все</p>
         </div>
-
       </div>
     </div>
   );

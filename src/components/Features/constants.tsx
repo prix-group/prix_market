@@ -10,7 +10,7 @@ export const cardsContent = [
     en: {
       title: 'USER-FRIENDLY MARKETPLACE',
       description:
-          'Finding and choosing a car in any country has become much easier. Onward to the search!',
+        'Finding and choosing a car in any country has become much easier. Onward to the search!',
     },
     ru: {
       title: 'УДОБНЫЙ МАРКЕТПЛЕЙС',

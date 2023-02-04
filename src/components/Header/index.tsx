@@ -75,9 +75,7 @@ export const Header: FC<IHeader> = ({ setLang }) => {
                       [styles['link--active']]: router.pathname === item.link,
                     })}
                   >
-                    {translation?.lang === 'en'
-                      ? item.text.en
-                      : item.text.ru}
+                    {translation?.lang === 'en' ? item.text.en : item.text.ru}
                   </Link>
                 </li>
               );

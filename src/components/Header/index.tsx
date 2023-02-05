@@ -1,4 +1,6 @@
 import styles from './styles.module.scss';
+import engFlag from '../../../public/images/flag-for-flag-united-kingdom-svgrepo-com.svg';
+import rusFlag from '../../../public/images/flag-for-flag-russia-svgrepo-com.svg';
 import {
   Dispatch,
   FC,
@@ -14,7 +16,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { links } from '@components/Header/constants';
 import { Menu } from '@components/Menu';
-import { multilangContext, translations } from '@/src/context/multilangContext';
+import { multilangContext } from '@/src/context/multilangContext';
 
 interface IHeader {
   setLang: Dispatch<SetStateAction<string>>;
@@ -35,8 +37,18 @@ export const Header: FC<IHeader> = ({ setLang }) => {
   }, [isOpen]);
 
   const handleLanguageSwitch = () => {
-    translations?.lang === 'en' ? setLang('ru') : setLang('en');
+    translation.lang === 'en' ? setLang('ru') : setLang('en');
   };
+  //
+  // const returnLangboxMarkup = () => {
+  //   if (langboxOpen) {
+  //     return (
+  //         <div>
+  //
+  //         </div>
+  //     )
+  //   }
+  // }
 
   return (
     <header
@@ -82,13 +94,17 @@ export const Header: FC<IHeader> = ({ setLang }) => {
             })}
           </ul>
         </nav>
-        <div className={styles['header__language-button']}>
-          <p
-            className={styles['header__language-content']}
-            onClick={handleLanguageSwitch}
-          >
-            {translation.lang === 'ru' ? 'en' : 'ру'}
+        <div
+          className={styles['header__language-button']}
+          onClick={handleLanguageSwitch}
+        >
+          <p className={styles['header__language-content']}>
+            {translation.lang === 'ru' ? 'рус' : 'en'}
           </p>
+          <img
+            className={styles['header__language-flag']}
+            src={translation.lang === 'en' ? engFlag.src : rusFlag.src}
+          />
         </div>
         {isOpen && <Menu setIsOpen={setIsOpen} />}
       </div>

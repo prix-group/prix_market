@@ -1,10 +1,7 @@
 import styles from './styles.module.scss';
-import engFlag from '../../../public/images/flag-for-flag-united-kingdom-svgrepo-com.svg';
-import rusFlag from '../../../public/images/flag-for-flag-russia-svgrepo-com.svg';
 import {
   Dispatch,
   FC,
-  MouseEvent,
   SetStateAction,
   useContext,
   useEffect,
@@ -43,59 +40,6 @@ export const Header: FC<IHeader> = ({ setLang }) => {
       ? document.body.classList.add('menu-opened')
       : document.body.classList.remove('menu-opened');
   }, [isMenuOpen]);
-
-  // const handleLangBoxMarkup = () => {
-  //   if (!langboxOpen) {
-  //     return (
-  //       <div
-  //         className={styles['header__language-button']}
-  //         onClick={handleLangBoxOpen}
-  //       >
-  //         <p className={styles['header__language-content']}>
-  //           {translation.lang === 'ru' ? 'рус' : 'en'}
-  //         </p>
-  //         <img
-  //           className={styles['header__language-flag']}
-  //           src={translation.lang === 'en' ? engFlag.src : rusFlag.src}
-  //         />
-  //       </div>
-  //     );
-  //   }
-  //   return (
-  //     <>
-  //       <div className={styles['overlay']} onClick={handleLangBoxClose}></div>
-  //       <div className={styles['header__language-menu']}>
-  //         <div className={styles['header__language-container']}>
-  //           <ul className={styles['header__language-list']}>
-  //             <li
-  //               className={styles['header__language-item']}
-  //               onClick={(e) => handleLanguageSwitch(e)}
-  //               id={'en'}
-  //             >
-  //               <p className={styles['header__language-name']}>en</p>
-  //               <img
-  //                 className={styles['header__language-flag']}
-  //                 src={engFlag.src}
-  //                 alt={'dsf'}
-  //               />
-  //             </li>
-  //             <li
-  //               className={styles['header__language-item']}
-  //               onClick={(e) => handleLanguageSwitch(e)}
-  //               id={'ru'}
-  //             >
-  //               <p className={styles['header__language-name']}>ru</p>
-  //               <img
-  //                 className={styles['header__language-flag']}
-  //                 src={rusFlag.src}
-  //               />
-  //             </li>
-  //           </ul>
-  //         </div>
-  //       </div>
-  //     </>
-  //   );
-  // };
 
   return (
     <header

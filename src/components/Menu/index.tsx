@@ -3,10 +3,10 @@ import { Dispatch, FC, SetStateAction, useContext } from 'react';
 import { SocialNetworks } from '@components/SocialNetworks';
 import { links } from '@components/Header/constants';
 import { multilangContext } from '@/src/context/multilangContext';
-import { LangBox } from '@components/LangBox';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import cn from 'classnames';
+import { LangBox } from '@components/LangBox';
 
 interface IMenu {
   setIsOpen: Dispatch<SetStateAction<boolean>>;

@@ -1,6 +1,6 @@
 import { createContext } from 'react';
 
-export const multilangContext = createContext();
+export const multilangContext = createContext('ru');
 
 export const translations = {
   en: {

@@ -58,19 +58,29 @@
 
   padding: 0;
   margin: 20px 0 100px;
-}
 
-.item {
-  margin: 20px 0;
-  padding: 10px 5px;
+  &__item {
+    margin: 20px 0;
+    padding: 10px 5px;
 
-  border-bottom: 1px solid rgb(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgb(0, 0, 0, 0.2);
 
-  transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
 
-  &:active {
-    color: $prix-sat;
-    scale: .97;
+    &:active {
+      color: $prix-sat;
+      scale: .97;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $black;
+
+    &--active {
+      color: $prix-sat;
+      font-weight: 800;
+    }
   }
 }
 

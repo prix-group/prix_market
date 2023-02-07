@@ -18,98 +18,101 @@ import { useRouter } from 'next/router';
 import { links } from '@components/Header/constants';
 import { Menu } from '@components/Menu';
 import { multilangContext } from '@/src/context/multilangContext';
+import { DESKTOP_SIZE } from '@/src/constants';
+import { useWindowSize } from '@/src/customHooks/useWindowSize';
+import { LangBox } from '@components/LangBox';
 
 interface IHeader {
   setLang: Dispatch<SetStateAction<string>>;
 }
 
 export const Header: FC<IHeader> = ({ setLang }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [langboxOpen, setLangboxOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const windowSize = useWindowSize();
+  let isDesktop = windowSize.width >= DESKTOP_SIZE;
+
   const router = useRouter();
 
   const translation = useContext(multilangContext);
 
-  const toggleNavMenuOpen = () => setIsOpen((isOpen) => !isOpen);
+  const toggleNavMenuOpen = () => setIsMenuOpen((isOpen) => !isOpen);
 
   useEffect(() => {
-    isOpen
+    isMenuOpen
       ? document.body.classList.add('menu-opened')
       : document.body.classList.remove('menu-opened');
-  }, [isOpen]);
+  }, [isMenuOpen]);
 
-  const handleLanguageSwitch = (e: MouseEvent<HTMLLIElement>) => {
-    setLang(e.currentTarget.id);
-    handleLangBoxClose();
-  };
-
-  const handleLangBoxOpen = () => {
-    setLangboxOpen(true);
-  };
-
-  const handleLangBoxClose = () => {
-    setLangboxOpen(false);
-  };
-
-  const handleLangBoxMarkup = () => {
-    if (!langboxOpen) {
-      return (
-        <div
-          className={styles['header__language-button']}
-          onClick={handleLangBoxOpen}
-        >
-          <p className={styles['header__language-content']}>
-            {translation.lang === 'ru' ? 'рус' : 'en'}
-          </p>
-          <img
-            className={styles['header__language-flag']}
-            src={translation.lang === 'en' ? engFlag.src : rusFlag.src}
-          />
-        </div>
-      );
-    }
-    return (
-      <div className={styles['header__language-menu']}>
-        <div className={styles['overlay']} onClick={handleLangBoxClose}></div>
-        <div className={styles['header__language-container']}>
-          <ul className={styles['header__language-list']}>
-            <li
-              className={styles['header__language-item']}
-              onClick={(e) => handleLanguageSwitch(e)}
-              id={'en'}
-            >
-              <p className={styles['header__language-name']}>en</p>
-              <img
-                className={styles['header__language-flag']}
-                src={engFlag.src}
-                alt={'dsf'}
-              />
-            </li>
-            <li
-              className={styles['header__language-item']}
-              onClick={(e) => handleLanguageSwitch(e)}
-              id={'ru'}
-            >
-              <p className={styles['header__language-name']}>ru</p>
-              <img
-                className={styles['header__language-flag']}
-                src={rusFlag.src}
-              />
-            </li>
-          </ul>
-        </div>
-      </div>
-    );
-  };
+  // const handleLangBoxMarkup = () => {
+  //   if (!langboxOpen) {
+  //     return (
+  //       <div
+  //         className={styles['header__language-button']}
+  //         onClick={handleLangBoxOpen}
+  //       >
+  //         <p className={styles['header__language-content']}>
+  //           {translation.lang === 'ru' ? 'рус' : 'en'}
+  //         </p>
+  //         <img
+  //           className={styles['header__language-flag']}
+  //           src={translation.lang === 'en' ? engFlag.src : rusFlag.src}
+  //         />
+  //       </div>
+  //     );
+  //   }
+  //   return (
+  //     <>
+  //       <div className={styles['overlay']} onClick={handleLangBoxClose}></div>
+  //       <div className={styles['header__language-menu']}>
+  //         <div className={styles['header__language-container']}>
+  //           <ul className={styles['header__language-list']}>
+  //             <li
+  //               className={styles['header__language-item']}
+  //               onClick={(e) => handleLanguageSwitch(e)}
+  //               id={'en'}
+  //             >
+  //               <p className={styles['header__language-name']}>en</p>
+  //               <img
+  //                 className={styles['header__language-flag']}
+  //                 src={engFlag.src}
+  //                 alt={'dsf'}
+  //               />
+  //             </li>
+  //             <li
+  //               className={styles['header__language-item']}
+  //               onClick={(e) => handleLanguageSwitch(e)}
+  //               id={'ru'}
+  //             >
+  //               <p className={styles['header__language-name']}>ru</p>
+  //               <img
+  //                 className={styles['header__language-flag']}
+  //                 src={rusFlag.src}
+  //               />
+  //             </li>
+  //           </ul>
+  //         </div>
+  //       </div>
+  //     </>
+  //   );
+  // };
 
   return (
     <header
-      className={cn(styles['header'], { [styles['header--white']]: isOpen })}
+      className={cn(styles['header'], {
+        [styles['header--white']]: isMenuOpen,
+      })}
     >
       <div className={styles['content']}>
-        <Link href={'/'} className={styles['link']}>
+        <Link
+          href={'/'}
+          className={styles['link']}
+          onClick={() => setIsMenuOpen(false)}
+        >
           <h1
-            className={cn(styles['logo'], { [styles['logo--white']]: isOpen })}
+            className={cn(styles['logo'], {
+              [styles['logo--white']]: isMenuOpen,
+            })}
           >
             prix
           </h1>
@@ -117,13 +120,13 @@ export const Header: FC<IHeader> = ({ setLang }) => {
 
         <button
           className={cn(styles['menu-button'], {
-            [styles['menu-button--close']]: isOpen,
+            [styles['menu-button--close']]: isMenuOpen,
           })}
           onClick={toggleNavMenuOpen}
         >
           <img
             className={styles['menu-button__icon']}
-            src={isOpen ? closeButtonIcon.src : burgerButtonIcon.src}
+            src={isMenuOpen ? closeButtonIcon.src : burgerButtonIcon.src}
             alt={'button icon'}
           />
         </button>
@@ -146,46 +149,9 @@ export const Header: FC<IHeader> = ({ setLang }) => {
             })}
           </ul>
         </nav>
-        {handleLangBoxMarkup()}
-        {isOpen && <Menu setIsOpen={setIsOpen} />}
+        {isDesktop && <LangBox setLang={setLang} />}
+        {isMenuOpen && <Menu setIsOpen={setIsMenuOpen} setLang={setLang} />}
       </div>
     </header>
   );
 };
-// eslint-disable-next-line no-lone-blocks
-{
-  /* <div */
-}
-{
-  /*  className={styles['header__language-button']} */
-}
-{
-  /*  onClick={handleLangBoxOpen} */
-}
-{
-  /* > */
-}
-{
-  /*  <p className={styles['header__language-content']}> */
-}
-{
-  /*    {translation.lang === 'ru' ? 'рус' : 'en'} */
-}
-{
-  /*  </p> */
-}
-{
-  /*  <img */
-}
-{
-  /*    className={styles['header__language-flag']} */
-}
-{
-  /*    src={translation.lang === 'en' ? engFlag.src : rusFlag.src} */
-}
-{
-  /*  /> */
-}
-{
-  /* </div> */
-}

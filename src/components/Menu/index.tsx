@@ -1,14 +1,24 @@
 import styles from './styles.module.scss';
-import { Dispatch, FC, SetStateAction } from 'react';
+import { Dispatch, FC, SetStateAction, useContext } from 'react';
 import { SocialNetworks } from '@components/SocialNetworks';
 import { links } from '@components/Header/constants';
+import { multilangContext } from '@/src/context/multilangContext';
+import { LangBox } from '@components/LangBox';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import cn from 'classnames';
 
 interface IMenu {
   setIsOpen: Dispatch<SetStateAction<boolean>>;
+  setLang: Dispatch<SetStateAction<string>>;
 }
 
-export const Menu: FC<IMenu> = ({ setIsOpen }) => {
+export const Menu: FC<IMenu> = ({ setIsOpen, setLang }) => {
   const closeMenu = () => setIsOpen(false);
+
+  const router = useRouter();
+
+  const translation = useContext(multilangContext);
 
   return (
     <div className={styles['navigation']}>
@@ -19,14 +29,27 @@ export const Menu: FC<IMenu> = ({ setIsOpen }) => {
         <ul className={styles['list']}>
           {links.map((link, index) => {
             return (
-              <li key={index} className={styles['item']} onClick={closeMenu}>
-                {link.text}
+              <li
+                key={index}
+                className={styles['list__item']}
+                onClick={closeMenu}
+              >
+                <Link
+                  className={cn(styles['list__link'], {
+                    [styles['list__link--active']]:
+                      router.pathname === link.link,
+                  })}
+                  href={link.link}
+                >
+                  {link.text[translation.lang]}
+                </Link>
               </li>
             );
           })}
         </ul>
         <p className={styles['note']}>Social Networks</p>
         <SocialNetworks />
+        <LangBox setLang={setLang} />
       </div>
     </div>
   );

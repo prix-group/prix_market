@@ -1,7 +1,7 @@
 import styles from './styles.module.scss';
-import buyCar from '../../../public/images/buycar.png';
 import { useContext } from 'react';
 import { multilangContext } from '@/src/context/multilangContext';
+import buyCar from '@public/images/buycar.png';
 
 export const Intro = () => {
   const translation = useContext(multilangContext);

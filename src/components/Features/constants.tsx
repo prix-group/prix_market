@@ -1,8 +1,21 @@
-import ecommercePic from '../../../public/images/ecommerce.png';
-import policyPic from '../../../public/images/policy.png';
-import fixPic from '../../../public/images/fix.png';
+import ecommercePic from '@public/images/ecommerce.png';
+import policyPic from '@public/images/policy.png';
+import fixPic from '@public/images/fix.png';
 
-export const cardsContent = [
+interface ICardLang {
+  title: string;
+  description: string;
+}
+
+interface ICard {
+  id: string;
+  imageUrl: string;
+  imageAlt: string;
+  en: ICardLang;
+  ru: ICardLang;
+}
+
+export const cardsContent: Array<ICard> = [
   {
     id: 'marketplace',
     imageUrl: ecommercePic.src,

@@ -15,8 +15,8 @@ import { useRouter } from 'next/router';
 import { links } from '@components/Header/constants';
 import { Menu } from '@components/Menu';
 import { multilangContext } from '@/src/context/multilangContext';
-import { DESKTOP_SIZE } from '@/src/constants';
-import { useWindowSize } from '@/src/customHooks/useWindowSize';
+import { DESKTOP_SIZE } from '@/src/shared/constants';
+import { useWindowSize } from '@/src/hooks/useWindowSize';
 import { LangBox } from '@components/LangBox';
 
 interface IHeader {

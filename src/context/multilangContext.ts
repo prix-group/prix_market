@@ -1,8 +1,16 @@
 import { createContext } from 'react';
 
-export const multilangContext = createContext('ru');
+export interface IIntroLang {
+  lang: 'en' | 'ru';
+  intro: {
+    title: string;
+    subtitle: string;
+  };
+}
 
-export const translations = {
+export type IntroTranslations = Record<string, IIntroLang>;
+
+export const translations: IntroTranslations = {
   en: {
     lang: 'en',
     intro: {
@@ -20,3 +28,5 @@ export const translations = {
     },
   },
 };
+
+export const multilangContext = createContext(translations['en']);

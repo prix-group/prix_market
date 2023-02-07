@@ -1,7 +1,7 @@
-import linkedinIcon from '../../../public/images/linkedin-svgrepo-com.svg';
-import githubIcon from '../../../public/images/github-svgrepo-com.svg';
-import instagramIcon from '../../../public/images/instagram-svgrepo-com.svg';
-import facebookIcon from '../../../public/images/facebook-svgrepo-com.svg';
+import linkedinIcon from '@public/images/linkedin-svgrepo-com.svg';
+import githubIcon from '@public/images/github-svgrepo-com.svg';
+import instagramIcon from '@public/images/instagram-svgrepo-com.svg';
+import facebookIcon from '@public/images/facebook-svgrepo-com.svg';
 
 export const snListContent = [
   {

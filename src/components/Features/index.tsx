@@ -2,10 +2,10 @@ import { FeatureCard } from '../FeatureCard';
 import styles from './styles.module.scss';
 import { cardsContent } from '@components/Features/constants';
 import { FC, useContext } from 'react';
-import { multilangContext } from '@/src/context/multilangContext';
+import { IIntroLang, multilangContext } from '@/src/context/multilangContext';
 
 export const Features: FC = () => {
-  const language = useContext(multilangContext);
+  const language = useContext(multilangContext) as IIntroLang;
 
   return (
     <section className={styles.features}>

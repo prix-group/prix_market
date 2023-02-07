@@ -10,8 +10,8 @@ import {
   useState,
 } from 'react';
 import { multilangContext } from '@/src/context/multilangContext';
-import { useWindowSize } from '@/src/customHooks/useWindowSize';
-import { DESKTOP_SIZE } from '@/src/constants';
+import { useWindowSize } from '@/src/hooks/useWindowSize';
+import { DESKTOP_SIZE } from '@/src/shared/constants';
 
 interface ILangBox {
   setLang: Dispatch<SetStateAction<string>>;

@@ -13,6 +13,7 @@
   }
 
   &__language {
+
     &-button {
       display: flex;
       justify-content: space-around;
@@ -20,11 +21,11 @@
 
       border-radius: 6px;
       background-color: $white;
-      width: 64px;
+      width: 80px;
       height: 32px;
       cursor: pointer;
 
-      padding: 0 2px;
+      padding: 0;
 
       transition: all .2s ease-in-out;
 
@@ -49,7 +50,70 @@
       width: 25px;
 
     }
+
+    &-menu {
+      display: flex;
+      width: 80px;
+      height: 32px;
+      padding: 0;
+    }
+
+    &-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    &-list {
+      list-style: nonne;
+      padding: 0;
+      margin: 0;
+
+      width: 100%;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      background-color: $white;
+      border-radius: 6px;
+
+      color: $prix-sat;
+
+      overflow: hidden;
+    }
+
+    &-item {
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 5px;
+
+      max-width: 100%;
+
+      transition: all .2s ease-in-out;
+
+      &:hover {
+        background-color: $prix-dark;
+        color: $white;
+        scale: 1.05;
+        cursor: pointer;
+      }
+    }
+
+    &-name {
+      margin: 0;
+    }
   }
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1000px;
+  background-color: transparent;
+  opacity: .5;
 }
 
 .content {

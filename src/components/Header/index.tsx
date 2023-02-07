@@ -4,6 +4,7 @@ import rusFlag from '../../../public/images/flag-for-flag-russia-svgrepo-com.svg
 import {
   Dispatch,
   FC,
+  MouseEvent,
   SetStateAction,
   useContext,
   useEffect,
@@ -24,6 +25,7 @@ interface IHeader {
 
 export const Header: FC<IHeader> = ({ setLang }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [langboxOpen, setLangboxOpen] = useState(false);
   const router = useRouter();
 
   const translation = useContext(multilangContext);
@@ -36,19 +38,69 @@ export const Header: FC<IHeader> = ({ setLang }) => {
       : document.body.classList.remove('menu-opened');
   }, [isOpen]);
 
-  const handleLanguageSwitch = () => {
-    translation.lang === 'en' ? setLang('ru') : setLang('en');
+  const handleLanguageSwitch = (e: MouseEvent<HTMLLIElement>) => {
+    setLang(e.currentTarget.id);
+    handleLangBoxClose();
   };
-  //
-  // const returnLangboxMarkup = () => {
-  //   if (langboxOpen) {
-  //     return (
-  //         <div>
-  //
-  //         </div>
-  //     )
-  //   }
-  // }
+
+  const handleLangBoxOpen = () => {
+    setLangboxOpen(true);
+  };
+
+  const handleLangBoxClose = () => {
+    setLangboxOpen(false);
+  };
+
+  const handleLangBoxMarkup = () => {
+    if (!langboxOpen) {
+      return (
+        <div
+          className={styles['header__language-button']}
+          onClick={handleLangBoxOpen}
+        >
+          <p className={styles['header__language-content']}>
+            {translation.lang === 'ru' ? 'рус' : 'en'}
+          </p>
+          <img
+            className={styles['header__language-flag']}
+            src={translation.lang === 'en' ? engFlag.src : rusFlag.src}
+          />
+        </div>
+      );
+    }
+    return (
+      <div className={styles['header__language-menu']}>
+        <div className={styles['overlay']} onClick={handleLangBoxClose}></div>
+        <div className={styles['header__language-container']}>
+          <ul className={styles['header__language-list']}>
+            <li
+              className={styles['header__language-item']}
+              onClick={(e) => handleLanguageSwitch(e)}
+              id={'en'}
+            >
+              <p className={styles['header__language-name']}>en</p>
+              <img
+                className={styles['header__language-flag']}
+                src={engFlag.src}
+                alt={'dsf'}
+              />
+            </li>
+            <li
+              className={styles['header__language-item']}
+              onClick={(e) => handleLanguageSwitch(e)}
+              id={'ru'}
+            >
+              <p className={styles['header__language-name']}>ru</p>
+              <img
+                className={styles['header__language-flag']}
+                src={rusFlag.src}
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+    );
+  };
 
   return (
     <header
@@ -94,20 +146,46 @@ export const Header: FC<IHeader> = ({ setLang }) => {
             })}
           </ul>
         </nav>
-        <div
-          className={styles['header__language-button']}
-          onClick={handleLanguageSwitch}
-        >
-          <p className={styles['header__language-content']}>
-            {translation.lang === 'ru' ? 'рус' : 'en'}
-          </p>
-          <img
-            className={styles['header__language-flag']}
-            src={translation.lang === 'en' ? engFlag.src : rusFlag.src}
-          />
-        </div>
+        {handleLangBoxMarkup()}
         {isOpen && <Menu setIsOpen={setIsOpen} />}
       </div>
     </header>
   );
 };
+// eslint-disable-next-line no-lone-blocks
+{
+  /* <div */
+}
+{
+  /*  className={styles['header__language-button']} */
+}
+{
+  /*  onClick={handleLangBoxOpen} */
+}
+{
+  /* > */
+}
+{
+  /*  <p className={styles['header__language-content']}> */
+}
+{
+  /*    {translation.lang === 'ru' ? 'рус' : 'en'} */
+}
+{
+  /*  </p> */
+}
+{
+  /*  <img */
+}
+{
+  /*    className={styles['header__language-flag']} */
+}
+{
+  /*    src={translation.lang === 'en' ? engFlag.src : rusFlag.src} */
+}
+{
+  /*  /> */
+}
+{
+  /* </div> */
+}

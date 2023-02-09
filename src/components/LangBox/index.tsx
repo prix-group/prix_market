@@ -21,20 +21,20 @@ export const LangBox: FC<ILangBox> = ({ setLang }) => {
   const [langboxOpen, setLangboxOpen] = useState(false);
 
   const windowSize = useWindowSize();
-  let isMobile = windowSize.width < DESKTOP_SIZE;
+  const isMobile = windowSize.width < DESKTOP_SIZE;
 
   const translation = useContext(multilangContext);
 
   const handleLanguageSwitch = (e: MouseEvent<HTMLLIElement>) => {
     setLang(e.currentTarget.id);
-    handleLangBoxClose();
+    closeLangBox();
   };
 
-  const handleLangBoxOpen = () => {
+  const openLangBox = () => {
     setLangboxOpen(true);
   };
 
-  const handleLangBoxClose = () => {
+  const closeLangBox = () => {
     setLangboxOpen(false);
   };
 
@@ -43,10 +43,10 @@ export const LangBox: FC<ILangBox> = ({ setLang }) => {
       return (
         <div
           className={styles['langbox__language-button']}
-          onClick={handleLangBoxOpen}
+          onClick={openLangBox}
         >
           <p className={styles['langbox__language-content']}>
-            {translation.lang === 'ru' ? 'рус' : 'en'}
+            {translation.lang}
           </p>
           <img
             className={styles['langbox__language-flag']}
@@ -60,7 +60,7 @@ export const LangBox: FC<ILangBox> = ({ setLang }) => {
     if (langboxOpen && !isMobile) {
       return (
         <>
-          <div className={styles['overlay']} onClick={handleLangBoxClose}></div>
+          <div className={styles['overlay']} onClick={closeLangBox}></div>
           <div className={styles['langbox__language-menu']}>
             <div className={styles['langbox__language-container']}>
               <ul className={styles['langbox__language-list']}>
@@ -97,32 +97,30 @@ export const LangBox: FC<ILangBox> = ({ setLang }) => {
 
     if (isMobile) {
       return (
-        <>
-          <ul className={styles['langbox__language-list--mobile']}>
-            <li
-              className={styles['langbox__language-item--mobile']}
-              id={'en'}
-              onClick={(e) => handleLanguageSwitch(e)}
-            >
-              <img
-                className={styles['langbox__language-flag--mobile']}
-                src={engFlag.src}
-                alt={'english flag'}
-              />
-            </li>
-            <li
-              className={styles['langbox__language-item--mobile']}
-              id={'ru'}
-              onClick={(e) => handleLanguageSwitch(e)}
-            >
-              <img
-                className={styles['langbox__language-flag--mobile']}
-                src={rusFlag.src}
-                alt={'russian flag'}
-              />
-            </li>
-          </ul>
-        </>
+        <ul className={styles['langbox__language-list--mobile']}>
+          <li
+            className={styles['langbox__language-item--mobile']}
+            id={'en'}
+            onClick={(e) => handleLanguageSwitch(e)}
+          >
+            <img
+              className={styles['langbox__language-flag--mobile']}
+              src={engFlag.src}
+              alt={'english flag'}
+            />
+          </li>
+          <li
+            className={styles['langbox__language-item--mobile']}
+            id={'ru'}
+            onClick={(e) => handleLanguageSwitch(e)}
+          >
+            <img
+              className={styles['langbox__language-flag--mobile']}
+              src={rusFlag.src}
+              alt={'russian flag'}
+            />
+          </li>
+        </ul>
       );
     }
   };

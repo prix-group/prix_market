@@ -12,7 +12,7 @@ import burgerButtonIcon from '@public/images/menu-burger-horizontal-svgrepo-com 
 import closeButtonIcon from '@public/images/cancel-close-svgrepo-com.svg';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { links } from '@components/Header/constants';
+import { headerItems } from '@components/Header/constants';
 import { Menu } from '@components/Menu';
 import { multilangContext } from '@/src/context/multilangContext';
 import { DESKTOP_SIZE } from '@/src/shared/constants';
@@ -27,7 +27,7 @@ export const Header: FC<IHeader> = ({ setLang }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const windowSize = useWindowSize();
-  let isDesktop = windowSize.width >= DESKTOP_SIZE;
+  const isDesktop = windowSize.width >= DESKTOP_SIZE;
 
   const router = useRouter();
 
@@ -77,7 +77,7 @@ export const Header: FC<IHeader> = ({ setLang }) => {
 
         <nav className={styles['navigation']}>
           <ul className={styles['navigation__list']}>
-            {links.map((item) => {
+            {headerItems.map((item) => {
               return (
                 <li className={styles['navigation__item']} key={item.link}>
                   <Link
@@ -86,7 +86,7 @@ export const Header: FC<IHeader> = ({ setLang }) => {
                       [styles['link--active']]: router.pathname === item.link,
                     })}
                   >
-                    {translation?.lang === 'en' ? item.text.en : item.text.ru}
+                    {item.text[translation.lang]}
                   </Link>
                 </li>
               );

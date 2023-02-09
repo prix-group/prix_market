@@ -1,7 +1,7 @@
 import styles from './styles.module.scss';
 import { Dispatch, FC, SetStateAction, useContext } from 'react';
 import { SocialNetworks } from '@components/SocialNetworks';
-import { links } from '@components/Header/constants';
+import { headerItems } from '@components/Header/constants';
 import { multilangContext } from '@/src/context/multilangContext';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -14,11 +14,10 @@ interface IMenu {
 }
 
 export const Menu: FC<IMenu> = ({ setIsOpen, setLang }) => {
-  const closeMenu = () => setIsOpen(false);
-
   const router = useRouter();
-
   const translation = useContext(multilangContext);
+
+  const closeMenu = () => setIsOpen(false);
 
   return (
     <div className={styles['navigation']}>
@@ -27,7 +26,7 @@ export const Menu: FC<IMenu> = ({ setIsOpen, setLang }) => {
           Связаться с нами
         </button>
         <ul className={styles['list']}>
-          {links.map((link, index) => {
+          {headerItems.map((link, index) => {
             return (
               <li
                 key={index}

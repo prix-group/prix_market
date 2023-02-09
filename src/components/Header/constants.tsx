@@ -1,4 +1,4 @@
-export const links = [
+export const headerItems = [
   {
     text: {
       ru: 'О нас',

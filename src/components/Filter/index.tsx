@@ -17,7 +17,10 @@ export const Filter: FC<IFilter> = ({ isMobile, isHidden }) => {
       )}
     >
       <div className={''}>
-        <p className={styles['filter__title']}>FILTER</p>
+        <div className={styles['filter__heading']}>
+          <p className={styles['filter__title']}>Фильтры</p>
+          <p className={styles['filter__reset']}>Сбросить все</p>
+        </div>
       </div>
     </div>
   );

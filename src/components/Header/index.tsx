@@ -1,33 +1,62 @@
 import styles from './styles.module.scss';
-import { FC, useEffect, useState } from 'react';
+import {
+  Dispatch,
+  FC,
+  SetStateAction,
+  useContext,
+  useEffect,
+  useState,
+} from 'react';
 import cn from 'classnames';
 import burgerButtonIcon from '@public/images/menu-burger-horizontal-svgrepo-com .svg';
 import closeButtonIcon from '@public/images/cancel-close-svgrepo-com.svg';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { links } from '@components/Header/constants';
+import { headerItems } from '@components/Header/constants';
 import { Menu } from '@components/Menu';
+import { multilangContext } from '@/src/context/multilangContext';
+import { DESKTOP_SIZE } from '@/src/shared/constants';
+import { useWindowSize } from '@/src/hooks/useWindowSize';
+import { LangBox } from '@components/LangBox';
 
-export const Header: FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+interface IHeader {
+  setLang: Dispatch<SetStateAction<string>>;
+}
+
+export const Header: FC<IHeader> = ({ setLang }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const windowSize = useWindowSize();
+  const isDesktop = windowSize.width >= DESKTOP_SIZE;
+
   const router = useRouter();
 
-  const toggleNavMenuOpen = () => setIsOpen((isOpen) => !isOpen);
+  const translation = useContext(multilangContext);
+
+  const toggleNavMenuOpen = () => setIsMenuOpen((isOpen) => !isOpen);
 
   useEffect(() => {
-    isOpen
+    isMenuOpen
       ? document.body.classList.add('menu-opened')
       : document.body.classList.remove('menu-opened');
-  }, [isOpen]);
+  }, [isMenuOpen]);
 
   return (
     <header
-      className={cn(styles['header'], { [styles['header--white']]: isOpen })}
+      className={cn(styles['header'], {
+        [styles['header--white']]: isMenuOpen,
+      })}
     >
       <div className={styles['content']}>
-        <Link href={'/'} className={styles['link']}>
+        <Link
+          href={'/'}
+          className={styles['link']}
+          onClick={() => setIsMenuOpen(false)}
+        >
           <h1
-            className={cn(styles['logo'], { [styles['logo--white']]: isOpen })}
+            className={cn(styles['logo'], {
+              [styles['logo--white']]: isMenuOpen,
+            })}
           >
             prix
           </h1>
@@ -35,20 +64,20 @@ export const Header: FC = () => {
 
         <button
           className={cn(styles['menu-button'], {
-            [styles['menu-button--close']]: isOpen,
+            [styles['menu-button--close']]: isMenuOpen,
           })}
           onClick={toggleNavMenuOpen}
         >
           <img
             className={styles['menu-button__icon']}
-            src={isOpen ? closeButtonIcon.src : burgerButtonIcon.src}
+            src={isMenuOpen ? closeButtonIcon.src : burgerButtonIcon.src}
             alt={'button icon'}
           />
         </button>
 
         <nav className={styles['navigation']}>
           <ul className={styles['navigation__list']}>
-            {links.map((item) => {
+            {headerItems.map((item) => {
               return (
                 <li className={styles['navigation__item']} key={item.link}>
                   <Link
@@ -57,15 +86,15 @@ export const Header: FC = () => {
                       [styles['link--active']]: router.pathname === item.link,
                     })}
                   >
-                    {item.text}
+                    {item.text[translation.lang]}
                   </Link>
                 </li>
               );
             })}
           </ul>
         </nav>
-
-        {isOpen && <Menu setIsOpen={setIsOpen} />}
+        {isDesktop && <LangBox setLang={setLang} />}
+        {isMenuOpen && <Menu setIsOpen={setIsMenuOpen} setLang={setLang} />}
       </div>
     </header>
   );

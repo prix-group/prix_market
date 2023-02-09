@@ -1,18 +1,30 @@
-export const links = [
+export const headerItems = [
   {
-    text: 'О нас',
+    text: {
+      ru: 'О нас',
+      en: 'About us',
+    },
     link: '/about-us',
   },
   {
-    text: 'Автомобили',
+    text: {
+      ru: 'Автомобили',
+      en: 'Cars',
+    },
     link: '/market',
   },
   {
-    text: 'Сотрудничество',
+    text: {
+      ru: 'Сотрудничество',
+      en: 'Cooperation',
+    },
     link: '/partnership',
   },
   {
-    text: 'Блог',
+    text: {
+      ru: 'Блог',
+      en: 'Blog',
+    },
     link: '/blog',
   },
 ];

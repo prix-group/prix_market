@@ -16,12 +16,14 @@
 .content {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   border-bottom: 1px solid rgb(255, 255, 255, .2);
   box-sizing: border-box;
   width: calc(100% - 80px);
 
   margin: 0 auto;
+  padding-right: 40px;
 
   font-family: Fester, Inter, sans-serif;
   font-size: 16px;

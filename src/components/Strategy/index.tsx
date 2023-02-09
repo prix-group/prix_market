@@ -14,14 +14,16 @@ export const Strategy: FC = () => {
         >
           Madrasa-Installments
         </span>
-        <span className={styles['strategy__line']}>investment strategy</span>
+        <span className={styles['strategy__title-line']}>
+          investment strategy
+        </span>
       </h2>
 
       <ul className={styles['strategy__info']}>
         <li className={styles['strategy__info-item']}>
           <span className={styles['strategy__info-item-title']}>
-              starting from 2.5 million sum
-            </span>
+            starting from 2.5 million sum
+          </span>
 
           <span className={styles['strategy__info-item-subtitle']}>
             follow-on investments

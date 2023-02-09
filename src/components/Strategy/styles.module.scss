@@ -1,38 +1,11 @@
+@import "../../styles/mixins";
+
 .strategy {
     margin: 140px auto;
     max-width: 1200px;
 
     &__title {
-        font-size: 56px;
-        line-height: 60px;
-
-        margin: 0 0 60px;
-
-        &-line {
-            display: block;
-            position: relative;
-
-            &--underlined {
-                display: inline;
-
-                &:before {
-                    content: '';
-                    position: absolute;
-                    width: 100%;
-
-                    left: 0;
-                    bottom: 5px;
-
-                    white-space: nowrap;
-                    height: 30px;
-
-                    border-bottom: 15px solid #00cbb1;
-                    line-height: 15px;
-
-                    z-index: -1;
-                }
-            }
-        }
+        @include section-title;
     }
 
     &__info {

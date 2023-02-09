@@ -5,6 +5,7 @@ import { Advantage } from '@components/Advantage';
 import { advantageContent } from '@components/Advantage/constants';
 import { Community } from '@components/Community';
 import { Strategy } from '@components/Strategy';
+import { Calculator } from '@components/Calculator';
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
         );
       })}
       <Strategy />
+      <Calculator />
       <Blog />
       <Community />
     </>

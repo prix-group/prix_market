@@ -2,10 +2,22 @@
 
 .intro {
   background-color: $main-gray;
-  min-height: 100vh;
+  min-height: 720px;
 
   font-family: Gilroy, Inter, sans-serif;
   color: $black;
+
+  animation: fadeOutAnimation 1s linear;
+}
+
+@keyframes fadeOutAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .wrapper {

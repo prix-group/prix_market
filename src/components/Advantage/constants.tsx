@@ -1,6 +1,7 @@
 import ewalletPic from '@public/images/eWallet.png';
 import partnersPic from '@public/images/people.png';
 import navigationPic from '@public/images/navigation.png';
+import carPic from '@public/images/car-white-svgrepo-com.svg'
 
 export const advantageContent = [
   {
@@ -9,7 +10,7 @@ export const advantageContent = [
     subtitle: `Команда Prix.kz безустанно трудится над тем, чтобы процесс оплаты прошел гладко и без проблем`,
     text: '',
     flexReverse: false,
-    image: ewalletPic,
+    image: carPic,
   },
   {
     type: 'partners',

@@ -1,7 +1,7 @@
 @import "src/styles/colors";
 
 .header {
-  background-color: $prix-header;
+  background-color: $main-gray;
   position:-webkit-sticky;
   position:sticky;
   top:0;
@@ -13,23 +13,25 @@
   }
 }
 
-.content {
+.wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   border-bottom: 1px solid rgb(255, 255, 255, .2);
   box-sizing: border-box;
-  width: calc(100% - 80px);
+  max-width: 1200px;
+  min-height: 96px;
 
   margin: 0 auto;
 
   font-family: Fester, Inter, sans-serif;
   font-size: 16px;
-  color: $white;
+  color: $black;
 }
 
 .logo {
-  color: $white;
+  color: $black;
   font-size: 60px;
 
   margin: 0;
@@ -87,42 +89,46 @@
   }
 
   &__item {
-    font-size: 18px;
-    transition: scale .2s ease-in-out;
-
-    &:hover {
-      cursor: pointer;
-      scale: 1.05;
-    }
+    font-size: 16px;
   }
 }
 
 .link {
   text-decoration: none;
-  color: white;
+  color: $black;
+  font-family: Gilroy, Inter, sans-serif;
+  font-weight: 400;
+
+  transition: color .2s ease-in-out;
 
   &--active {
     text-decoration: underline;
     font-weight: 600;
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: #01cab0;
   }
 }
 
 @media screen and (max-width: 420px) {
   .header {
     width: 100%;
+
+    &__content {
+      display: none;
+    }
   }
 
-  .content {
-    width: 95%;
+  .wrapper {
+    width: 100%;
     align-items: center;
-    padding: 0 15px;
-  }
-
-  .navigation {
-    display: none;
+    padding: 0 25px;
   }
 
   .menu-button {
     display: block;
+    border: 1px solid black;
   }
 }

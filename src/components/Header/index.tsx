@@ -24,7 +24,7 @@ export const Header: FC = () => {
     <header
       className={cn(styles['header'], { [styles['header--white']]: isOpen })}
     >
-      <div className={styles['content']}>
+      <div className={styles['wrapper']}>
         <Link href={'/'} className={styles['link']}>
           <h1
             className={cn(styles['logo'], { [styles['logo--white']]: isOpen })}
@@ -45,25 +45,26 @@ export const Header: FC = () => {
             alt={'button icon'}
           />
         </button>
-
-        <nav className={styles['navigation']}>
-          <ul className={styles['navigation__list']}>
-            {links.map((item) => {
-              return (
-                <li className={styles['navigation__item']} key={item.link}>
-                  <Link
-                    href={item.link}
-                    className={cn(styles['link'], {
-                      [styles['link--active']]: router.pathname === item.link,
-                    })}
-                  >
-                    {item.text}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </nav>
+        <div className={styles['header__content']}>
+          <nav className={styles['navigation']}>
+            <ul className={styles['navigation__list']}>
+              {links.map((item) => {
+                return (
+                  <li className={styles['navigation__item']} key={item.link}>
+                    <Link
+                      href={item.link}
+                      className={cn(styles['link'], {
+                        [styles['link--active']]: router.pathname === item.link,
+                      })}
+                    >
+                      {item.text}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
+        </div>
 
         {isOpen && <Menu setIsOpen={setIsOpen} />}
       </div>

@@ -1,24 +1,87 @@
-import { FeatureCard } from '../FeatureCard';
 import styles from './styles.module.scss';
-import { cardsContent } from '@components/Features/constants';
 import { FC } from 'react';
+import cn from 'classnames';
+import Link from 'next/link';
+import firstCardImg from '@public/images/half-circle-svgrepo-com.svg';
+import secondCardImg from '@public/images/flower-svgrepo-com.svg';
 
 export const Features: FC = () => {
   return (
-    <section className={styles.features}>
-      <div className={styles.cards}>
-        {cardsContent.map((item) => {
-          return (
-            <FeatureCard
-              key={item.id}
-              id={item.id}
-              src={item.imageUrl}
-              alt={item.imageAlt}
-              title={item.title}
-              text={item.description}
-            />
-          );
-        })}
+    <section className={styles['features']}>
+      <div className={styles['wrapper']}>
+        <div
+          className={cn(styles['features__about'], styles['features__card'])}
+        >
+          <h2
+            className={cn(
+              styles['features__about-title'],
+              styles['features__card-title'],
+            )}
+          >
+            Как работает PRIX
+          </h2>
+          <p
+            className={cn(
+              styles['features__about-brief'],
+              styles['features__card-brief'],
+            )}
+          >
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa,
+            eum? Lorem ipsum dolor sit amet,
+          </p>
+          <Link
+            href={'#'}
+            className={cn(
+              styles['features__about-link'],
+              styles['features__card-link'],
+            )}
+          >
+            Узнать подробнее &#8594;
+          </Link>
+          <img
+            src={firstCardImg.src}
+            alt={''}
+            className={styles['features__card-image']}
+          />
+        </div>
+        <div
+          className={cn(
+            styles['features__regulations'],
+            styles['features__card'],
+          )}
+        >
+          <h2
+            className={cn(
+              styles['features__regulations-title'],
+              styles['features__card-title'],
+            )}
+          >
+            Соответствие всем стандартам качества
+          </h2>
+          <p
+            className={cn(
+              styles['features__regulations-brief'],
+              styles['features__card-brief'],
+            )}
+          >
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor
+            harum inventore nemo nihil tempora ullam? Lorem
+          </p>
+          <Link
+            href={'#'}
+            className={cn(
+              styles['features__regulations-link'],
+              styles['features__card-link'],
+            )}
+          >
+            Узнать подробнее &#8594;
+          </Link>
+          <img
+            src={secondCardImg.src}
+            alt={''}
+            className={styles['features__card-image']}
+          />
+        </div>
       </div>
     </section>
   );

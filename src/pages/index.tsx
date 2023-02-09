@@ -4,6 +4,7 @@ import { Features } from '@components/Features';
 import { Advantage } from '@components/Advantage';
 import { advantageContent } from '@components/Advantage/constants';
 import { Community } from '@components/Community';
+import { Strategy } from '@components/Strategy';
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
           />
         );
       })}
+      <Strategy />
       <Blog />
       <Community />
     </>

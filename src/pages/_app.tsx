@@ -9,6 +9,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
+        <link rel="icon" href="/_next/static/media/favicon.ico" />
         <title>Prix - сервис покупки авто из-за границы</title>
       </Head>
 

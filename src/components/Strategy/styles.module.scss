@@ -4,6 +4,8 @@
     margin: 140px auto;
     max-width: 1200px;
 
+    font-family: Gilroy, Inter, sans-serif;
+
     &__title {
         @include section-title;
     }

@@ -6,5 +6,5 @@ export const FAQ: FC = () => {
     <section className={styles['FAQ']}>
       <h1 className={styles['FAQ__title']}>Frequently Asked Questions</h1>
     </section>
-  )
-}
+  );
+};

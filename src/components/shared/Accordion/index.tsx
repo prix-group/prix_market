@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react';
 import styles from './styles.module.scss';
 import cn from 'classnames';
-import arrowSVG from '@public/images/arrow-down-bold-svgrepo-com.svg'
+import arrowSVG from '@public/images/arrow-down-bold-svgrepo-com.svg';
 
 const data = [
   {
@@ -11,6 +11,21 @@ const data = [
   },
   {
     id: 2,
+    q: 'Для более подробной информации по Казахстанской компании см?',
+    a: 'Для более подробной информации по Казахстанской компании см!',
+  },
+  {
+    id: 3,
+    q: 'Для более подробной информации по Казахстанской компании см?',
+    a: 'Для более подробной информации по Казахстанской компании см!',
+  },
+  {
+    id: 3,
+    q: 'Для более подробной информации по Казахстанской компании см?',
+    a: 'Для более подробной информации по Казахстанской компании см!',
+  },
+  {
+    id: 3,
     q: 'Для более подробной информации по Казахстанской компании см?',
     a: 'Для более подробной информации по Казахстанской компании см!',
   },
@@ -40,13 +55,12 @@ export const Accordion: FC = () => {
     <div className={styles['accordion']}>
       {data.map((item, index) => {
         return (
-          <div
-            key={index}
-            id={String(index)}
-            className={styles['accordion__wrapper']}
-            onClick={onClick}
-          >
-            <div className={styles['accordion__item']}>
+          <div key={index} className={styles['accordion__wrapper']}>
+            <div
+              id={String(index)}
+              className={styles['accordion__item']}
+              onClick={onClick}
+            >
               <span className={styles['accordion__item-question']}>
                 {item.q}
               </span>

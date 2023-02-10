@@ -2,43 +2,15 @@ import React, { FC, useState } from 'react';
 import styles from './styles.module.scss';
 import cn from 'classnames';
 import arrowSVG from '@public/images/arrow-down-bold-svgrepo-com.svg';
-
-const data = [
-  {
-    id: 1,
-    q: 'Для более подробной информации по Казахстанской компании см?',
-    a: 'Для более подробной информации по Казахстанской компании см!',
-  },
-  {
-    id: 2,
-    q: 'Для более подробной информации по Казахстанской компании см?',
-    a: 'Для более подробной информации по Казахстанской компании см!',
-  },
-  {
-    id: 3,
-    q: 'Для более подробной информации по Казахстанской компании см?',
-    a: 'Для более подробной информации по Казахстанской компании см!',
-  },
-  {
-    id: 3,
-    q: 'Для более подробной информации по Казахстанской компании см?',
-    a: 'Для более подробной информации по Казахстанской компании см!',
-  },
-  {
-    id: 3,
-    q: 'Для более подробной информации по Казахстанской компании см?',
-    a: 'Для более подробной информации по Казахстанской компании см!',
-  },
-  {
-    id: 3,
-    q: 'Для более подробной информации по Казахстанской компании см?',
-    a: 'Для более подробной информации по Казахстанской компании см!',
-  },
-];
+import { IAccordionItem } from '@components/shared/Accordion/types';
 
 const qnsStates = (length: number) => Array(length).fill(false);
 
-export const Accordion: FC = () => {
+interface IAccordion {
+  data: IAccordionItem[];
+}
+
+export const Accordion: FC<IAccordion> = ({ data }) => {
   const [qnState, setQnState] = useState(qnsStates(data.length));
 
   const onClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -62,7 +34,7 @@ export const Accordion: FC = () => {
               onClick={onClick}
             >
               <span className={styles['accordion__item-question']}>
-                {item.q}
+                {item.question}
               </span>
               <img
                 src={arrowSVG.src}
@@ -78,7 +50,7 @@ export const Accordion: FC = () => {
                 [styles['accordion__item-answer--open']]: qnState[index],
               })}
             >
-              {item.a}
+              {item.answer}
             </span>
           </div>
         );

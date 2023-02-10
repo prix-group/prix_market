@@ -44,7 +44,7 @@ export const Strategy: FC = () => {
         </li>
         <li className={styles['strategy__info-item']}>
           <span className={styles['strategy__info-item-title']}>
-            starting from 2.5 million sum
+            starting from 1 something
           </span>
           <span className={styles['strategy__info-item-subtitle']}>
             follow-on investments
@@ -68,7 +68,7 @@ export const Strategy: FC = () => {
         </li>
         <li className={styles['strategy__info-item']}>
           <span className={styles['strategy__info-item-title']}>
-            starting from 2.5 million sum
+            starting from 2.5 million
           </span>
           <span className={styles['strategy__info-item-subtitle']}>
             follow-on investments

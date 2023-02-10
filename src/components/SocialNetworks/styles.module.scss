@@ -2,24 +2,20 @@
 
 .social {
   display: flex;
-  width: 200px;
   justify-content: space-between;
   list-style: none;
 
   &--icon {
-    width: 35px;
-    height: 35px;
-
-    border: 1px solid black;
-    border-radius: 15px;
-
-    overflow: hidden;
-
+    width: 30px;
     transition: all .1s ease-in-out;
+    margin: 0 10px 0 0;
 
     &:hover {
       scale: 1.05;
-      background-color: $gray-advantages;
+    }
+
+    &:last-of-type {
+      margin: 0;
     }
   }
 
@@ -33,7 +29,7 @@
   }
 
   &--image {
-    width: 70%;
+    width: 100%;
   }
 }
 

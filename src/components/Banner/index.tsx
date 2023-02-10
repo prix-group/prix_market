@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import styles from './styles.module.scss';
-import paperPlanePic from '@public/images/paper-plane.png';
+import threePic from '@public/images/three.svg';
 
 export const Banner: FC = () => {
   return (
@@ -11,8 +11,8 @@ export const Banner: FC = () => {
         </p>
         <img
           className={styles['banner__image']}
-          src={paperPlanePic.src}
-          alt="paper plane"
+          src={threePic.src}
+          alt="banner element"
         />
 
         <form className={styles.form}>
@@ -25,6 +25,7 @@ export const Banner: FC = () => {
                 placeholder="youremail@example.kz"
               />
             </label>
+
             <button className={styles.button} type="submit">
               Выслать
             </button>

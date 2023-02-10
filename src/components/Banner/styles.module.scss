@@ -31,9 +31,12 @@
 
   &__image {
     position: absolute;
-    scale: 1.2;
-    bottom: -250px;
-    right: -100px;
+    width: 220px;
+    top: 50px;
+    left: 50px;
+    transform: translate(-50%, -50%);
+
+    overflow: hidden;
 
     height: 100%;
   }

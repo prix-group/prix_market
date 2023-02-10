@@ -24,15 +24,13 @@ export const Footer: FC = () => {
                 <div className="footer__company" key={item.id}>
                   <p className={styles['list--title']}>{item.title}</p>
                   <ul className={styles.list}>
-                    {item.list.map((item) => {
-                      return (
-                        <li className={styles.link} key={item.id}>
-                          <a href={item.url} className={styles.anchor}>
-                            {item.title}
-                          </a>
-                        </li>
-                      );
-                    })}
+                    {item.list.map((item) => (
+                      <li className={styles.link} key={item.id}>
+                        <a href={item.url} className={styles.anchor}>
+                          {item.title}
+                        </a>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               );

@@ -2,8 +2,9 @@
 
 .FAQ {
     max-width: 1200px;
-    font-family: Gilroy, sans-serif;
     margin: 0 auto;
+
+    font-family: Gilroy, sans-serif;
 
     &__title {
         @include section-title;
@@ -14,6 +15,7 @@
     }
 
     &__questions {
+        margin: 12px 0;
         font-size: 40px;
     }
 }

@@ -1,7 +1,6 @@
 import { Intro } from '@components/Intro';
 import { Blog } from '@components/Blog';
 import { Features } from '@components/Features';
-// import { Community } from '@components/Community';
 import { Strategy } from '@components/Strategy';
 import { Calculator } from '@components/Calculator';
 import { Banner } from '@components/Banner';
@@ -19,7 +18,6 @@ export default function Home() {
       <Blog />
       <FAQ />
       <Banner />
-      {/* <Community /> */}
     </>
   );
 }

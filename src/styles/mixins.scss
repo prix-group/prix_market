@@ -5,12 +5,9 @@
     margin: 0 0 60px;
 
     &-line {
-        display: block;
         position: relative;
 
         &--underlined {
-            display: inline;
-
             &:before {
                 content: '';
                 position: absolute;
@@ -27,6 +24,10 @@
 
                 z-index: -1;
             }
+        }
+
+        &--block {
+            display: block;
         }
     }
 }

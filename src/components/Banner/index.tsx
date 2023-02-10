@@ -6,7 +6,9 @@ export const Banner: FC = () => {
   return (
     <div className={styles['banner']}>
       <div className={styles['banner__content']}>
-        <p className={styles['banner__description']}>Узнайте больше о сотрудничестве с Prix</p>
+        <p className={styles['banner__description']}>
+          Узнайте больше о сотрудничестве с Prix
+        </p>
         <img
           className={styles['banner__image']}
           src={paperPlanePic.src}
@@ -20,7 +22,7 @@ export const Banner: FC = () => {
                 className={styles.input}
                 name="email"
                 type="email"
-                placeholder="exmaple@example.kz"
+                placeholder="youremail@example.kz"
               />
             </label>
             <button className={styles.button} type="submit">
@@ -30,5 +32,5 @@ export const Banner: FC = () => {
         </form>
       </div>
     </div>
-  )
+  );
 };

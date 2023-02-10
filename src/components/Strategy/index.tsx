@@ -14,7 +14,12 @@ export const Strategy: FC = () => {
         >
           Madrasa-Installments
         </span>
-        <span className={styles['strategy__title-line']}>
+        <span
+          className={cn(
+            styles['strategy__title-line'],
+            styles['strategy__title-line--block'],
+          )}
+        >
           investment strategy
         </span>
       </h2>

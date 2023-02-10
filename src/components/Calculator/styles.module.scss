@@ -4,14 +4,46 @@
     max-width: 1200px;
     margin: 0 auto;
 
+    font-family: Gilroy, Inter, sans-serif;
+
     &__title {
-        @include section-title
+        @include section-title;
+        font-weight: 600;
+        font-size: 56px;
+
+        &-line:first-of-type {
+            margin-right: 10px;
+        }
     }
 
+    &__text {
+        max-width: 50%;
+
+        &-title {
+            font-size: 46px;
+            font-weight: 500;
+            line-height: 50px;
+
+            margin: 0 0 20px;
+        }
+
+        &-description {
+            font-size: 28px;
+            font-weight: 400;
+            line-height: 40px;
+
+            margin: 0;
+        }
+    }
+
+
     &__wrapper {
-        min-height: 580px;
+        box-sizing: border-box;
+        min-height: 480px;
         width: 100%;
         background: linear-gradient(227.67deg,#ded9ff -16.22%,#dcfff9),#f2f2f8;
+
+        padding: 75px 65px;
         border-radius: 50px;
 
         position: relative;

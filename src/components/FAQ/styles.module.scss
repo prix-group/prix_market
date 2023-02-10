@@ -1,7 +1,19 @@
 @import "../../styles/mixins";
 
 .FAQ {
+    max-width: 1200px;
+    font-family: Gilroy, sans-serif;
+    margin: 0 auto;
+
     &__title {
-        @include section-title
+        @include section-title;
+
+        font-weight: 600;
+        margin: 0 0 20px;
+        text-align: center;
+    }
+
+    &__questions {
+        font-size: 40px;
     }
 }

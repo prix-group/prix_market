@@ -57,4 +57,4 @@ export const Accordion: FC<IAccordion> = ({ data }) => {
       })}
     </div>
   );
-}
+};

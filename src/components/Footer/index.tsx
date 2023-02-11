@@ -14,8 +14,7 @@ export const Footer: FC = () => {
             </p>
             <p className={styles['holding-info--description']}>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci
-              cumque distinctio doloribus illo illum inventore quod saepe. Et
-              laudantium maiores natus nihil sint voluptate, voluptates!
+              cumque distinctio!
             </p>
           </div>
           <div className={styles.lists}>

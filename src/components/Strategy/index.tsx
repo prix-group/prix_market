@@ -12,7 +12,7 @@ export const Strategy: FC = () => {
             styles['strategy__title-line--underlined'],
           )}
         >
-          Madrasa-Installments
+          Стратегия
         </span>
         <span
           className={cn(
@@ -20,58 +20,58 @@ export const Strategy: FC = () => {
             styles['strategy__title-line--block'],
           )}
         >
-          investment strategy
+          импорта автомобиля
         </span>
       </h2>
 
       <ul className={styles['strategy__info']}>
         <li className={styles['strategy__info-item']}>
           <span className={styles['strategy__info-item-title']}>
-            starting from 2.5 million sum
+            Без ограничений
           </span>
 
           <span className={styles['strategy__info-item-subtitle']}>
-            follow-on investments
+            выгодные предложения
           </span>
         </li>
         <li className={styles['strategy__info-item']}>
           <span className={styles['strategy__info-item-title']}>
-            starting from 2.5 million sum
+            Каждые 3 месяца
           </span>
           <span className={styles['strategy__info-item-subtitle']}>
-            follow-on investments
+            выгодные предложения
           </span>
         </li>
         <li className={styles['strategy__info-item']}>
           <span className={styles['strategy__info-item-title']}>
-            starting from 1 something
+            Каждые 3 месяца
           </span>
           <span className={styles['strategy__info-item-subtitle']}>
-            follow-on investments
+            выгодные предложения
           </span>
         </li>
         <li className={styles['strategy__info-item']}>
           <span className={styles['strategy__info-item-title']}>
-            starting from 2.5 million sum
+            Без ограничений
           </span>
           <span className={styles['strategy__info-item-subtitle']}>
-            follow-on investments
+            выгодные предложения
           </span>
         </li>
         <li className={styles['strategy__info-item']}>
           <span className={styles['strategy__info-item-title']}>
-            from 100k sum
+            Каждые 3 месяца
           </span>
           <span className={styles['strategy__info-item-subtitle']}>
-            follow-on investments
+            выгодные предложения
           </span>
         </li>
         <li className={styles['strategy__info-item']}>
           <span className={styles['strategy__info-item-title']}>
-            starting from 2.5 million
+            Без ограничений
           </span>
           <span className={styles['strategy__info-item-subtitle']}>
-            follow-on investments
+            выгодные предложения
           </span>
         </li>
       </ul>

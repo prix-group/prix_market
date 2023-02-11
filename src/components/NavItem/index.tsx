@@ -4,14 +4,14 @@ import { Dropdown } from '@components/Dropdown';
 import Link from 'next/link';
 import arrowIcon from '@public/images/arrow-up-bold-svgrepo-com.svg';
 
+interface IMenuItem {
+  text: string;
+  link: string;
+}
+
 interface INavItem {
   text: string;
-  menuItems: [
-    {
-      text: string;
-      link: string;
-    },
-  ];
+  menuItems?: Array<IMenuItem>;
   section: string;
   link: string;
 }

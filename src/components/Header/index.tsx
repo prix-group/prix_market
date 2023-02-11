@@ -1,5 +1,5 @@
 import styles from './styles.module.scss';
-import { FC, useEffect, useState } from 'react';
+import { FC, useEffect, useState, MouseEvent } from 'react';
 import cn from 'classnames';
 import burgerButtonIcon from '@public/images/menu-burger-horizontal-svgrepo-com .svg';
 import closeButtonIcon from '@public/images/cancel-close-svgrepo-com.svg';
@@ -7,11 +7,25 @@ import Link from 'next/link';
 import { links } from '@components/Header/constants';
 import { Menu } from '@components/Menu';
 import { NavItem } from '@components/NavItem';
+import { useRouter } from 'next/router';
 
 export const Header: FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
 
   const toggleNavMenuOpen = () => setIsOpen((isOpen) => !isOpen);
+
+  const handleLogoClick = (e: MouseEvent<HTMLElement>) => {
+    if (router.route === '/') {
+      e.preventDefault();
+
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'smooth',
+      });
+    }
+  };
 
   useEffect(() => {
     isOpen
@@ -24,7 +38,7 @@ export const Header: FC = () => {
       className={cn(styles['header'], { [styles['header--white']]: isOpen })}
     >
       <div className={styles['wrapper']}>
-        <Link href={'/'} className={styles['link']}>
+        <Link href={'/'} className={styles['link']} onClick={handleLogoClick}>
           <h1
             className={cn(styles['logo'], { [styles['logo--white']]: isOpen })}
           >

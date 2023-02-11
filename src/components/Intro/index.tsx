@@ -6,8 +6,10 @@ export const Intro = () => {
       <div className={styles.wrapper}>
         <div className={styles['content']}>
           <div className={styles['content__text']}>
-            <p className={styles['content__note']}>Первый и единственный</p>
-            <h1 className={styles['content__title']}>
+            <p className={styles['content__text-note']}>
+              Первый и единственный
+            </p>
+            <h1 className={styles['content__text-title']}>
               Онлайн-сервис покупки авто <br /> из-за границы
             </h1>
             <h3 className={styles['content__subtitle']}>

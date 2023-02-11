@@ -19,22 +19,22 @@ interface INavItem {
 export const NavItem: FC<INavItem> = ({ text, menuItems, section, link }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleDropdownOpen = () => {
+  const toggleDropdown = () => {
     setIsOpen((isOpen) => !isOpen);
   };
 
   if (menuItems) {
     return (
       <li
-        className={styles['navitem']}
-        onMouseEnter={toggleDropdownOpen}
-        onMouseLeave={toggleDropdownOpen}
+        className={styles['nav-item']}
+        onMouseEnter={toggleDropdown}
+        onMouseLeave={toggleDropdown}
       >
-        <Link href={link} className={styles['navitem__link']}>
+        <Link href={link} className={styles['nav-item__link']}>
           {text}
         </Link>
         <img
-          className={styles['navitem__arrow']}
+          className={styles['nav-item__arrow']}
           src={arrowIcon.src}
           alt={'arrow icon'}
         />
@@ -45,11 +45,11 @@ export const NavItem: FC<INavItem> = ({ text, menuItems, section, link }) => {
 
   return (
     <li
-      className={styles['navitem']}
-      onMouseEnter={toggleDropdownOpen}
-      onMouseLeave={toggleDropdownOpen}
+      className={styles['nav-item']}
+      onMouseEnter={toggleDropdown}
+      onMouseLeave={toggleDropdown}
     >
-      <Link href={link} className={styles['navitem__link']}>
+      <Link href={link} className={styles['nav-item__link']}>
         {text}
       </Link>
     </li>

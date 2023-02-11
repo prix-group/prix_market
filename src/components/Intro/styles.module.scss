@@ -24,7 +24,8 @@
   display: flex;
 
   max-width: 1200px;
-  height: 580px;
+  min-height: 500px;
+  max-height: 580px;
 
   margin: 0 auto;
   padding: 75px 65px;
@@ -43,26 +44,28 @@
   flex-direction: column;
   justify-content: space-between;
 
-  &__note {
-    font-size: 24px;
-    line-height: 30px;
-    font-weight: 500;
-    color: $purple-sat;
-  }
+  &__text {
+    &-note {
+      font-size: 24px;
+      line-height: 30px;
+      font-weight: 500;
+      color: $purple-sat;
+    }
 
-  &__title {
-    margin: 20px 0;
+    &-title {
+      margin: 20px 0;
 
-    font-weight: 600;
-    font-size: 60px;
-  }
+      font-weight: 600;
+      font-size: 60px;
+    }
 
-  &__subtitle {
-    font-weight: 300;
-    font-size: 24px;
-    line-height: 32px;
+    &-subtitle {
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 32px;
 
-    margin: 10px 0;
+      margin: 10px 0;
+    }
   }
 
   &__statistics {

@@ -14,7 +14,7 @@ export default function Home() {
         return (
           <Advantage
             key={item.type}
-            number={item.number}
+            number={item.order}
             type={item.type}
             flexReverse={item.flexReverse}
             text={item.text}

@@ -1,6 +1,6 @@
 @import '../../styles/colors';
 
-.navitem {
+.nav-item {
   width: auto;
 
   display: flex;
@@ -17,7 +17,7 @@
     cursor: pointer;
     height: 100%;
 
-    .navitem__arrow {
+    .navi-tem__arrow {
       rotate: 180deg;
     }
   }

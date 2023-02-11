@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { useWindowSize } from '@hooks/useWindowSize';
 import { DESKTOP_SIZE } from '@shared/constants';
-import { postData } from './constants';
+import { postData } from '../../views/constants';
 import { PostCard } from '@components/PostCard';
 import Link from 'next/link';
 import styles from './styles.module.scss';

@@ -1,10 +1,10 @@
-import bmwPic from '../../../public/images/bmwf90m5.jpg';
-import mariaPic from '../../../public/images/pexels-maria-orlova-4947408.jpg';
-import rusCarPic from '../../../public/images/pexels-brenner-oliveira-10151838.jpg';
-import harbourPic from '../../../public/images/pexels-chanaka-906494.jpg';
-import truckPic from '../../../public/images/pexels-photoscom-93398.jpg';
-import operatorPic from '../../../public/images/pexels-mart-production-7709208.jpg';
-import hyundaiPic from '../../../public/images/pexels-hyundai-motor-group-15116059.jpg';
+import bmwPic from '@public/images/bmwf90m5.jpg';
+import mariaPic from '@public/images/pexels-maria-orlova-4947408.jpg';
+import rusCarPic from '@public/images/pexels-brenner-oliveira-10151838.jpg';
+import harbourPic from '@public/images/pexels-chanaka-906494.jpg';
+import truckPic from '@public/images/pexels-photoscom-93398.jpg';
+import operatorPic from '@public/images/pexels-mart-production-7709208.jpg';
+import hyundaiPic from '@public/images/pexels-hyundai-motor-group-15116059.jpg';
 
 export const postData = [
   {

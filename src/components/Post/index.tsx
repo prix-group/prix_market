@@ -1,7 +1,7 @@
 import styles from './styles.module.scss';
 import { BlogTag } from '@components/Tags/BlogTag';
 import { useRouter } from 'next/router';
-import { postData } from '../../pages/blog/constants';
+import { postData } from '../../views/constants';
 
 export const Post = () => {
   const router = useRouter();

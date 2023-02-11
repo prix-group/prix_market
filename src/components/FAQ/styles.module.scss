@@ -12,6 +12,10 @@
         font-weight: 600;
         margin: 0 0 20px;
         text-align: center;
+
+        &-line:first-of-type {
+            margin: 0 10px 0 0;
+        }
     }
 
     &__questions {

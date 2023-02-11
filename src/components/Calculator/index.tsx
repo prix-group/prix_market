@@ -30,7 +30,16 @@ export const Calculator: FC = () => {
           </p>
         </div>
 
-        <div className={styles['calculator__gadget']} />
+        <div className={styles['calculator__gadget']}>
+          <button
+            className={cn(
+              styles['calculator__button'],
+              styles['calculator__button--disabled'],
+            )}
+          >
+            Рассчитать
+          </button>
+        </div>
       </div>
     </section>
   );

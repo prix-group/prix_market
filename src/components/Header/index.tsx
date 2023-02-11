@@ -4,13 +4,12 @@ import cn from 'classnames';
 import burgerButtonIcon from '@public/images/menu-burger-horizontal-svgrepo-com .svg';
 import closeButtonIcon from '@public/images/cancel-close-svgrepo-com.svg';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { links } from '@components/Header/constants';
 import { Menu } from '@components/Menu';
+import { NavItem } from '@components/NavItem';
 
 export const Header: FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const router = useRouter();
 
   const toggleNavMenuOpen = () => setIsOpen((isOpen) => !isOpen);
 
@@ -50,16 +49,13 @@ export const Header: FC = () => {
             <ul className={styles['navigation__list']}>
               {links.map((item) => {
                 return (
-                  <li className={styles['navigation__item']} key={item.link}>
-                    <Link
-                      href={item.link}
-                      className={cn(styles['link'], {
-                        [styles['link--active']]: router.pathname === item.link,
-                      })}
-                    >
-                      {item.text}
-                    </Link>
-                  </li>
+                  <NavItem
+                    key={item.section}
+                    text={item.text}
+                    menuItems={item.submenu}
+                    section={item.section}
+                    link={item.link}
+                  />
                 );
               })}
             </ul>

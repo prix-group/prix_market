@@ -18,11 +18,15 @@ export const Intro = () => {
           <div className={styles['content__statistics']}>
             <div className={styles['content__statistics-container']}>
               <h3 className={styles['content__statistics-title']}>100 +</h3>
-              <p className={styles['content__statistics-note']}>Бла бла бла бла</p>
+              <p className={styles['content__statistics-note']}>
+                Бла бла бла бла
+              </p>
             </div>
             <div className={styles['content__statistics-container']}>
               <h3 className={styles['content__statistics-title']}>100 +</h3>
-              <p className={styles['content__statistics-note']}>Бла бла бла бла</p>
+              <p className={styles['content__statistics-note']}>
+                Бла бла бла бла
+              </p>
             </div>
           </div>
         </div>

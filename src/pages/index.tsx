@@ -1,8 +1,8 @@
 import { Intro } from '@components/Intro';
 import { Blog } from '@components/Blog';
 import { Features } from '@components/Features';
-import { Advantage } from '@components/Advantage';
-import { advantageContent } from '@components/Advantage/constants';
+import { Advantage } from '@components/JorneyMap';
+import { advantageContent } from '@components/JorneyMap/constants';
 import { Community } from '@components/Community';
 
 export default function Home() {
@@ -14,10 +14,9 @@ export default function Home() {
         return (
           <Advantage
             key={item.type}
+            number={item.number}
             type={item.type}
             flexReverse={item.flexReverse}
-            title={item.title}
-            subtitle={item.subtitle}
             text={item.text}
             image={item.image.src}
           />

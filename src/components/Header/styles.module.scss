@@ -11,6 +11,10 @@
     background-color: $white;
     border-bottom: 2px solid $prix-header;
   }
+
+  &__content {
+     height: 100%;
+  }
 }
 
 .wrapper {
@@ -80,16 +84,24 @@
 }
 
 .navigation {
+
+  height: 95px;
   &__list {
     display: flex;
     justify-content: space-around;
     list-style: none;
     width: 500px;
-    padding: 24px;
+    margin: 0;
+    height: 100%;
   }
 
   &__item {
     font-size: 16px;
+    position: relative;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -108,8 +120,7 @@
 
   &:hover {
     cursor: pointer;
-    //color: #01cab0;
-    color: #D1848B;
+    color: $text-color-thirtiary;
   }
 }
 

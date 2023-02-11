@@ -1,16 +1,15 @@
 @import "../../styles/colors";
 
-.advantages {
-  min-height: 600px;
+.journey-map {
   width: 100%;
 
   margin: 0 auto;
   padding: 40px 0;
 
-  background-color: $white;
+  background-color: $main-gray;
 
   color: $black;
-  font-family: Fester, Inter,sans-serif;
+  font-family: Gilroy, Inter,sans-serif;
 
   &--grey {
     background-color: $light-gray-advantages;
@@ -18,7 +17,7 @@
 }
 
 .wrapper {
-  width: 80%;
+  max-width: 1200px;
   margin: 40px auto;
 
   display: flex;
@@ -29,30 +28,86 @@
   }
 }
 
-.image-container {
+.content {
+  width: 600px;
+  height: 490px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  padding: 70px 0;
+  box-sizing: border-box;
+
+  &__step {
+    font-size: 90px;
+    margin: 0;
+  }
+
+  &__description {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 60px;
+    z-index: 2;
+    position: relative;
+    margin: 0;
+  }
+}
+
+.illustration {
   width: 520px;
   height: 520px;
 
-  background-color: $orange-advantages;
-  border-radius: 600px;
+  border-radius: 50px;
+  background: -webkit-linear-gradient(90deg, #e8fafd,#d1fffc);
+  background: linear-gradient(90deg, #e8fafd,#d1fffc);
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
+
+  padding: 100px 80px;
+  box-sizing: border-box;
 
   &--transparent {
     background-color: transparent;
   }
+
+  &__urlInput {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &__url {
+    margin: 0;
+    padding: 5px 25px;
+
+    font-size: 28px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+
+  &__svg {
+    height: 40px;
+  }
+
+  &__image {
+    scale: .8;
+  }
+
+  &__description {
+    margin: 0;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+  }
 }
 
-.image {
-  scale: 1.1;
-
-  width: 600px;
-  height: 100%;
-}
 
 .info {
-  font-family: 'Fester', Inter, sans-serif;
+  font-family: Gilroy, Inter, sans-serif;
   font-weight: bolder;
   width: 40%;
 }

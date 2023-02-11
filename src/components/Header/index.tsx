@@ -4,13 +4,12 @@ import cn from 'classnames';
 import burgerButtonIcon from '@public/images/menu-burger-horizontal-svgrepo-com .svg';
 import closeButtonIcon from '@public/images/cancel-close-svgrepo-com.svg';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { links } from '@components/Header/constants';
 import { Menu } from '@components/Menu';
+import { NavItem } from '@components/NavItem';
 
 export const Header: FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const router = useRouter();
 
   const toggleNavMenuOpen = () => setIsOpen((isOpen) => !isOpen);
 
@@ -24,7 +23,7 @@ export const Header: FC = () => {
     <header
       className={cn(styles['header'], { [styles['header--white']]: isOpen })}
     >
-      <div className={styles['content']}>
+      <div className={styles['wrapper']}>
         <Link href={'/'} className={styles['link']}>
           <h1
             className={cn(styles['logo'], { [styles['logo--white']]: isOpen })}
@@ -45,25 +44,23 @@ export const Header: FC = () => {
             alt={'button icon'}
           />
         </button>
-
-        <nav className={styles['navigation']}>
-          <ul className={styles['navigation__list']}>
-            {links.map((item) => {
-              return (
-                <li className={styles['navigation__item']} key={item.link}>
-                  <Link
-                    href={item.link}
-                    className={cn(styles['link'], {
-                      [styles['link--active']]: router.pathname === item.link,
-                    })}
-                  >
-                    {item.text}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </nav>
+        <div className={styles['header__content']}>
+          <nav className={styles['navigation']}>
+            <ul className={styles['navigation__list']}>
+              {links.map((item) => {
+                return (
+                  <NavItem
+                    key={item.section}
+                    text={item.text}
+                    menuItems={item.submenu}
+                    section={item.section}
+                    link={item.link}
+                  />
+                );
+              })}
+            </ul>
+          </nav>
+        </div>
 
         {isOpen && <Menu setIsOpen={setIsOpen} />}
       </div>

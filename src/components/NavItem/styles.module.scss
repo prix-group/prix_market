@@ -1,0 +1,39 @@
+@import '../../styles/colors';
+
+.nav-item {
+  width: auto;
+
+  display: flex;
+  align-items: center;
+
+  font-family: Gilroy, Inter, sans-serif;
+
+  position: relative;
+
+  transition: all .1s ease-in-out;
+
+  &:hover {
+    scale: 1.01;
+    cursor: pointer;
+    height: 100%;
+
+    .navi-tem__arrow {
+      rotate: 180deg;
+    }
+  }
+
+
+  &__link {
+    color: inherit;
+    text-decoration: none;
+    transition: color .1s ease-in-out;
+  }
+
+  &__arrow {
+    width: 15px;
+    margin-left: 5px;
+    color: $text-color-thirtiary;
+
+    transition: all .3s ease-in-out;
+  }
+}

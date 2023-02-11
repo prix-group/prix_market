@@ -3,18 +3,85 @@
 .features {
   width: 100%;
 
-  font-family: 'Fester', Inter, sans-serif;
-  font-weight: 800;
+  font-family: 'Gilroy', Inter, sans-serif;
   color: $black;
 
-  margin: 40px 0 80px;
-}
+  padding: 100px 0;
+  background-color: $main-gray;
 
-.cards {
-  width: 80%;
-  margin: 0 auto;
+  &__wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
 
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    position: relative;
+
+    height: 312px;
+    background-color: $gray-card-background;
+
+    box-sizing: border-box;
+    padding: 50px;
+
+    border-radius: 50px;
+
+    overflow: hidden;
+
+    &--about {
+      width: 500px;
+    }
+
+    &--regulations {
+      width: 620px;
+    }
+
+    &-title {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 32px;
+      color: $text-color-primary;
+
+      margin: 0;
+    }
+
+    &-brief {
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 400;
+      max-width: 370px;
+      color: $text-color-secondary;
+
+      margin: 0;
+    }
+
+    &-link {
+      font-size: 20px;
+      line-height: 30px;
+      font-weight: 500;
+      color: $text-color-primary;
+      text-decoration: none;
+
+      transition: color .2s ease-in-out;
+
+      &:hover {
+        color: $prix-sat
+      }
+    }
+
+    &-image {
+      width: 200px;
+      rotate: 100deg;
+
+      position: absolute;
+      right: -30px;
+      bottom: -30px;
+    }
+  }
 }

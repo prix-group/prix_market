@@ -1,16 +1,14 @@
 import { useRouter } from 'next/router';
-import { useWindowSize } from '@hooks/useWindowSize';
-import { DESKTOP_SIZE } from '@shared/constants';
 import { postData } from '../../views/constants';
 import { PostCard } from '@components/PostCard';
 import Link from 'next/link';
 import styles from './styles.module.scss';
+import { DESKTOP_SIZE } from '@common/constants';
+import { useDevice } from '@hooks/useDevice';
 
 export default function BlogPage() {
   const router = useRouter();
-  const windowSize = useWindowSize();
-
-  const isDesktop = windowSize.width > DESKTOP_SIZE;
+  const isDesktop = useDevice(DESKTOP_SIZE);
 
   const back = () => router.back();
 

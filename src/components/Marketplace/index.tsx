@@ -2,7 +2,7 @@ import styles from './styles.module.scss';
 import { CarCard } from '@components/CarCard';
 import Link from 'next/link';
 import { carsData, POSTS_PER_PAGE } from '@components/Marketplace/constants';
-import { DESKTOP_SIZE } from '@shared/constants';
+import { DESKTOP_SIZE } from '@common/constants';
 import { useWindowSize } from '@hooks/useWindowSize';
 import { useState } from 'react';
 import { Filter } from '@components/Filter';

@@ -13,13 +13,9 @@
   transition: all .1s ease-in-out;
 
   &:hover {
-    scale: 1.01;
     cursor: pointer;
     height: 100%;
-
-    .navi-tem__arrow {
-      rotate: 180deg;
-    }
+    color: #7D67EA;
   }
 
 

@@ -1,0 +1,7 @@
+@import "src/styles/keyframes";
+
+.fade-in-animation {
+  &--in-view {
+    animation: fadeInAnimation 1s linear;
+  }
+}

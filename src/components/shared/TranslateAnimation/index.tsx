@@ -2,31 +2,39 @@ import { FC, ReactElement } from 'react';
 import { useInView } from 'react-intersection-observer';
 import cn from 'classnames';
 import styles from './styles.module.scss';
+import { isEven } from '@helpers/isEven';
+
+enum TranslateSides {
+  Left = 'left',
+  Right = 'right',
+}
 
 interface IConfig {
-  order: number;
+  index: number;
 }
 
 interface ITranslateAnimation {
-  children: ReactElement,
+  children: ReactElement;
   config: IConfig;
 }
-
-const isEven = (number: number): boolean => number % 2 === 0;
 
 export const TranslateAnimation: FC<ITranslateAnimation> = ({
   children,
   config,
 }) => {
   const { ref, inView } = useInView({ threshold: 0, triggerOnce: true });
-  const { order } = config;
+  const { index } = config;
+
+  const handleTranslateSide = (index: number) =>
+    isEven(index) ? TranslateSides.Right : TranslateSides.Left;
+
+  const translateSide = handleTranslateSide(index);
 
   return (
     <div
       ref={ref}
       className={cn({
-        [styles['animation__translate--left']]: inView && isEven(order),
-        [styles['animation__translate--right']]: inView && !isEven(order),
+        [styles[`animation__translate--${translateSide}`]]: inView,
       })}
     >
       {children}

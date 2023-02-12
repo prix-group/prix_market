@@ -3,11 +3,11 @@
 .animation {
   &__translate {
     &--left {
-      animation: translateLeft 1s ease-in-out;
+      animation: translateLeft 1s ease;
     }
 
     &--right {
-      animation: translateRight 1s ease-in-out;
+      animation: translateRight 1s ease;
     }
   }
 }

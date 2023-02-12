@@ -16,14 +16,7 @@ export const Advantage: FC<IAdvantage> = ({ order, text }) => {
           <h2 className={styles['content__step']}>{order}</h2>
           <p className={styles['content__description']}>{text}</p>
         </div>
-        <div className={styles['illustration']}>
-          <div className={styles['illustration__urlInput']}>
-            <p className={styles['illustration__url']}>www.dreamcar.com</p>
-            <img className={styles['illustration__svg']} src={loopa.src} />
-          </div>
-          <img className={styles['illustration__image']} src={carpic.src} />
-          <p className={styles['illustration__description']}>МАШИНА МЕЧТЫ</p>
-        </div>
+        <div className={styles['illustration']}></div>
       </div>
     </section>
   );

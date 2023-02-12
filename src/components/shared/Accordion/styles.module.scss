@@ -52,3 +52,9 @@
     }
   }
 }
+
+@media screen and (max-width: 420px) {
+  .accordion {
+    max-width: 100%;
+  }
+}

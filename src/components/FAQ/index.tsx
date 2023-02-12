@@ -9,7 +9,7 @@ export const FAQ: FC = () => {
   return (
     <section className={styles['FAQ']}>
       <FadeInAnimation>
-        <div className="wrapper">
+        <div className={cn('wrapper', styles['FAQ__wrapper'])}>
           <h2 className={styles['FAQ__title']}>
             <span className={styles['FAQ__title-line']}>Часто Задаваемые</span>
             <span

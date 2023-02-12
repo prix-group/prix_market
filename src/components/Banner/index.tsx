@@ -6,6 +6,7 @@ import cn from 'classnames';
 export const Banner: FC = () => {
   return (
     <div className={cn('wrapper', styles['banner'])}>
+      <div className={styles['banner__sticker']}></div>
       <div className={styles['banner__content']}>
         <p className={styles['banner__description']}>
           Узнайте больше о сотрудничестве с Prix

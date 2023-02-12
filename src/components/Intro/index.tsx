@@ -6,7 +6,9 @@ export const Intro = () => {
   return (
     <FadeInAnimation>
       <section className={styles.intro}>
-        <div className={cn(styles.wrapper, 'wrapper', styles['intro__wrapper'])}>
+        <div
+          className={cn(styles.wrapper, 'wrapper', styles['intro__wrapper'])}
+        >
           <div className={styles['content']}>
             <div className={styles['content__text']}>
               <p className={styles['content__text-note']}>

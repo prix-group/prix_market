@@ -2,7 +2,7 @@ import { FC } from 'react';
 import styles from './styles.module.scss';
 import cn from 'classnames';
 import { FadeInAnimation } from '@components/shared/FadeInAnimation';
-import Link from "next/link";
+import Link from 'next/link';
 
 export const Strategy: FC = () => {
   return (

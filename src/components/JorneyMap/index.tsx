@@ -24,7 +24,10 @@ export const Advantage: FC<IAdvantage> = ({
         </div>
         <div className={styles['illustration']}>
           <img
-            className={cn(styles['illustration__image'], styles[animation])}
+            className={cn(
+              styles['illustration__image'],
+              styles[`illustration__image--${animation}`],
+            )}
             src={image}
             alt={'icon'}
           />

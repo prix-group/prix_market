@@ -53,17 +53,6 @@
     margin: 0;
   }
 }
-.rotate {
-  animation: rotate 5s linear infinite;
-}
-
-.float {
-  animation: float 1s ease-in-out infinite alternate;
-}
-
-.pump {
-  animation: pump 1s ease-in-out infinite alternate;
-}
 
 .illustration {
   width: 520px;
@@ -86,6 +75,18 @@
 
   &__image {
     scale: .9;
+
+    &--rotate {
+      animation: rotate 5s linear infinite;
+    }
+
+    &--float {
+      animation: float 1s ease-in-out infinite alternate;
+    }
+
+    &--pump {
+      animation: pump 1s ease-in-out infinite alternate;
+    }
   }
 
   &__description {

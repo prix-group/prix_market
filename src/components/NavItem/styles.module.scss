@@ -21,6 +21,10 @@
     cursor: pointer;
     height: 100%;
     color: #7D67EA;
+
+    .nav-item__arrow {
+      rotate: 180deg;
+    }
   }
 
 
@@ -33,7 +37,6 @@
   &__arrow {
     width: 15px;
     margin-left: 5px;
-    color: $text-color-thirtiary;
 
     transition: all .3s ease-in-out;
   }

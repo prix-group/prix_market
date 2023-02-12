@@ -12,7 +12,7 @@ export const parseToUnderline = (
   return (
     <>
       {words.map((wordItem, index) => {
-        if (wordItem === word) {
+        if (wordItem.toLowerCase() === word.toLowerCase()) {
           return (
             <span
               key={index}
@@ -34,5 +34,4 @@ export const parseToUnderline = (
       })}
     </>
   );
-}
-
+};

@@ -89,7 +89,8 @@
 
 @media screen and (max-width: 420px) {
   .wrapper {
-    max-width: 90%;
+    padding: 15px;
+    box-sizing: border-box;
   }
 
   .flex {
@@ -106,10 +107,18 @@
   }
 
   .list {
-    &--title:nth-of-type(2n) {
-      text-align: center;
-      color: blue;
+    &--title {
+      font-size: 18px;
+
+      &:nth-of-type(2n) {
+        text-align: center;
+        color: blue;
+      }
     }
+  }
+
+  .link {
+    font-size: 14px;
   }
 
   .bottom {
@@ -117,6 +126,7 @@
   }
 
   .copyright {
+    font-size: 16px;
     text-align: center;
   }
 }

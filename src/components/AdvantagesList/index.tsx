@@ -12,8 +12,10 @@ export const AdvantagesList: FC = () => {
           <Advantage
             key={index}
             index={index}
-            text={item.text}
             order={item.order}
+            text={item.text}
+            image={item.image}
+            animation={item.animation}
             underlinedWord={words[index]}
           />
         );

@@ -1,7 +1,5 @@
 import styles from './styles.module.scss';
 import { FC } from 'react';
-import carpic from '@public/images/car-white-svgrepo-com.svg';
-import loopa from '@public/images/search-svgrepo-com.svg';
 import { TranslateAnimation } from '@components/shared/TranslateAnimation';
 import cn from 'classnames';
 import { parseToUnderline } from '@/src/helpers/parseToUnderline';
@@ -10,10 +8,19 @@ interface IAdvantage {
   index: number;
   order: string;
   text: string;
+  animation: string;
+  image: string;
   underlinedWord: string;
 }
 
-export const Advantage: FC<IAdvantage> = ({ index, order, text, underlinedWord }) => {
+export const Advantage: FC<IAdvantage> = ({
+  order,
+  index,
+  text,
+  animation,
+  image,
+  underlinedWord,
+}) => {
   return (
     <section className={cn('wrapper', styles['journey-map'])}>
       <TranslateAnimation config={{ index }}>
@@ -25,12 +32,14 @@ export const Advantage: FC<IAdvantage> = ({ index, order, text, underlinedWord }
             </p>
           </div>
           <div className={styles['illustration']}>
-            <div className={styles['illustration__urlInput']}>
-              <p className={styles['illustration__url']}>www.dreamcar.com</p>
-              <img className={styles['illustration__svg']} src={loopa.src} />
-            </div>
-            <img className={styles['illustration__image']} src={carpic.src} />
-            <p className={styles['illustration__description']}>МАШИНА МЕЧТЫ</p>
+            <img
+              className={cn(
+                styles['illustration__image'],
+                styles[`illustration__image--${animation}`],
+              )}
+              src={image}
+              alt={'icon'}
+            />
           </div>
         </div>
       </TranslateAnimation>

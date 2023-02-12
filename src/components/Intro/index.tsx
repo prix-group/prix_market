@@ -15,7 +15,7 @@ export const Intro = () => {
               <h1 className={styles['content__text-title']}>
                 Онлайн-сервис покупки авто <br /> из-за границы
               </h1>
-              <h3 className={styles['content__subtitle']}>
+              <h3 className={styles['content__text-subtitle']}>
                 Безопасный, быстрый и удобный <br />
                 способ покупки и доставки авто в Казахстан
               </h3>

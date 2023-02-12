@@ -53,6 +53,17 @@
     margin: 0;
   }
 }
+.rotate {
+  animation: rotate 5s linear infinite;
+}
+
+.float {
+  animation: float 1s ease-in-out infinite alternate;
+}
+
+.pump {
+  animation: pump 1s ease-in-out infinite alternate;
+}
 
 .illustration {
   width: 520px;
@@ -73,28 +84,8 @@
     background-color: transparent;
   }
 
-  &__urlInput {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
-
-  &__url {
-    margin: 0;
-    padding: 5px 25px;
-
-    font-size: 28px;
-    text-align: center;
-    border: 1px solid black;
-    border-radius: 10px;
-  }
-
-  &__svg {
-    height: 40px;
-  }
-
   &__image {
-    scale: .8;
+    scale: .9;
   }
 
   &__description {
@@ -200,5 +191,32 @@
     height: 335px;
 
     margin: 0 auto;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(40px);
+  }
+  100% {
+    transform: translateY(-40px);
+  }
+}
+
+@keyframes pump {
+  0% {
+    scale: 1.1;
+  }
+  100% {
+    scale: 0.9;
   }
 }

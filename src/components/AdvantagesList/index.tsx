@@ -7,7 +7,13 @@ export const AdvantagesList: FC = () => {
     <>
       {advantageContent.map((item) => {
         return (
-          <Advantage key={item.order} order={item.order} text={item.text} />
+          <Advantage
+            key={item.order}
+            order={item.order}
+            text={item.text}
+            image={item.image}
+            animation={item.animation}
+          />
         );
       })}
     </>

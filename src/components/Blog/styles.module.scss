@@ -16,17 +16,17 @@
   flex-direction: column;
   align-items: center;
 
-  font-family: 'Fester', Inter, sans-serif;
+  font-family: 'Gilroy', Inter, sans-serif;
   font-weight: 800;
   text-align: center;
 }
 
 .title {
-  font-size: 42px;
+  font-size: 56px;
   text-decoration: none;
   color: $black;
 
-  width: 600px;
+  width: 700px;
   margin: 0;
 
   transition: all .2s ease-in-out;
@@ -94,13 +94,14 @@
 }
 
 .link {
+  font-weight: 400;
   text-decoration: none;
-  color: $prix;
+  color: $black;
   transition: color .3s ease-in-out;
   margin: 0 0 20px;
 
   &:hover {
-    color: $prix-dark;
+    color: $black;
   }
 }
 

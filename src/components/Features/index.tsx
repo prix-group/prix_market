@@ -8,7 +8,7 @@ import secondCardImg from '@public/images/flower-svgrepo-com.svg';
 export const Features: FC = () => {
   return (
     <section className={styles['features']}>
-      <div className={styles['features__wrapper']}>
+      <div className={cn(styles['features__wrapper'], 'wrapper')}>
         <div
           className={cn(
             styles['features__card'],

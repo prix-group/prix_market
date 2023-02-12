@@ -1,11 +1,18 @@
+@import "colors";
+
 body {
     margin: 0;
+    background-color: $main-gray;
+    font-family: Gilroy, Inter, sans-serif;
 }
 
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
 .container {
     width: 100%;
-
     margin: 0 auto;
 }
 

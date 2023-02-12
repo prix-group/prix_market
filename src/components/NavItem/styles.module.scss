@@ -9,17 +9,18 @@
   font-family: Gilroy, Inter, sans-serif;
 
   position: relative;
+  margin: 0 20px;
 
   transition: all .1s ease-in-out;
 
+  &:last-of-type {
+    margin-right: 0;
+  }
+
   &:hover {
-    scale: 1.01;
     cursor: pointer;
     height: 100%;
-
-    .navi-tem__arrow {
-      rotate: 180deg;
-    }
+    color: #7D67EA;
   }
 
 

@@ -1,0 +1,40 @@
+@import "../../styles/mixins";
+
+.FAQ {
+    &__title {
+        @include section-title;
+
+        font-weight: 600;
+        margin: 0 0 20px;
+        text-align: center;
+
+        &-line:first-of-type {
+            margin: 0 10px 0 0;
+        }
+    }
+
+    &__questions {
+        margin: 12px 0;
+        font-size: 40px;
+    }
+
+    &__button {
+        display: block;
+        margin: 60px auto 0;
+        padding: 18px 80px;
+
+        background: #000000;
+        border-radius: 10px;
+        border: none;
+
+        font-weight: 600;
+        font-size: 16px;
+        color: #fff;
+
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}

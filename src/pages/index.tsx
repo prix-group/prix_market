@@ -1,29 +1,23 @@
 import { Intro } from '@components/Intro';
 import { Blog } from '@components/Blog';
 import { Features } from '@components/Features';
-import { Advantage } from '@components/JorneyMap';
-import { advantageContent } from '@components/JorneyMap/constants';
-import { Community } from '@components/Community';
+import { Strategy } from '@components/Strategy';
+import { Calculator } from '@components/Calculator';
+import { Banner } from '@components/Banner';
+import { AdvantagesList } from '@components/AdvantagesList';
+import { FAQ } from '@components/FAQ';
 
 export default function Home() {
   return (
     <>
       <Intro />
       <Features />
-      {advantageContent.map((item) => {
-        return (
-          <Advantage
-            key={item.type}
-            number={item.order}
-            type={item.type}
-            flexReverse={item.flexReverse}
-            text={item.text}
-            image={item.image.src}
-          />
-        );
-      })}
+      <AdvantagesList />
+      <Strategy />
+      <Calculator />
       <Blog />
-      <Community />
+      <FAQ />
+      <Banner />
     </>
   );
 }

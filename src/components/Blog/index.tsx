@@ -31,7 +31,7 @@ export const Blog: FC = () => {
               15 лучших способов выбрать правильный автомобиль для себя
             </p>
             <a href="#" className={styles.link}>
-              Узнать подробнее &#10548;
+              Узнать подробнее
             </a>
           </div>
           <div className={styles.item}>
@@ -47,7 +47,7 @@ export const Blog: FC = () => {
               Самые выгодные предложения импортных люксовых автомобилей
             </p>
             <a href="#" className={styles.link}>
-              Узнать подробнее &#10548;
+              Узнать подробнее
             </a>
           </div>
         </div>

@@ -1,11 +1,12 @@
 import styles from './styles.module.scss';
 import { FadeInAnimation } from '@components/shared/FadeInAnimation';
+import cn from 'classnames';
 
 export const Intro = () => {
   return (
     <FadeInAnimation>
       <section className={styles.intro}>
-        <div className={styles.wrapper}>
+        <div className={cn(styles.wrapper, 'wrapper')}>
           <div className={styles['content']}>
             <div className={styles['content__text']}>
               <p className={styles['content__text-note']}>

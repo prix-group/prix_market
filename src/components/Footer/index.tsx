@@ -2,11 +2,12 @@ import styles from './styles.module.scss';
 import { FC } from 'react';
 import { footerListContent } from '@components/Footer/constants';
 import { SocialNetworks } from '@components/SocialNetworks';
+import cn from 'classnames';
 
 export const Footer: FC = () => {
   return (
     <footer className={styles.footer}>
-      <section className={styles.wrapper}>
+      <section className={cn(styles.wrapper, 'wrapper')}>
         <div className={styles.flex}>
           <div className={styles['holding-info']}>
             <p className={styles['holding-info--title']}>

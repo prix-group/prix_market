@@ -1,25 +1,21 @@
 @import "src/styles/colors";
 
 .intro {
-  background-color: $main-gray;
   min-height: 720px;
-
-  font-family: Gilroy, Inter, sans-serif;
   color: $black;
 }
 
 .wrapper {
+  box-sizing: border-box;
+
   display: flex;
 
-  max-width: 1200px;
   min-height: 500px;
   max-height: 580px;
 
-  margin: 0 auto;
   padding: 75px 65px;
 
   border-radius: 50px;
-  box-sizing: border-box;
 
   background: -webkit-linear-gradient(46deg, #f0f9ff,#f3e5ff);
   background: linear-gradient(46deg, #f0f9ff,#f3e5ff);

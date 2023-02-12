@@ -7,7 +7,7 @@ export const Strategy: FC = () => {
   return (
     <section className={styles['strategy']}>
       <FadeInAnimation>
-        <>
+        <div className="wrapper">
           <h2 className={styles['strategy__title']}>
             <span
               className={cn(
@@ -78,7 +78,7 @@ export const Strategy: FC = () => {
               </span>
             </li>
           </ul>
-        </>
+        </div>
       </FadeInAnimation>
     </section>
   );

@@ -1,0 +1,13 @@
+@import "src/styles/keyframes";
+
+.animation {
+  &__translate {
+    &--left {
+      animation: translateLeft 1s ease-in-out;
+    }
+
+    &--right {
+      animation: translateRight 1s ease-in-out;
+    }
+  }
+}

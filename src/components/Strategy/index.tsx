@@ -80,7 +80,7 @@ export const Strategy: FC = () => {
             </li>
           </ul>
           <Link href={'#'} className={styles['strategy__link']}>
-            Рассчиитать доходность &#8594;
+            Узнать подробнее &#8594;
           </Link>
         </div>
       </FadeInAnimation>

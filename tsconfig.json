@@ -25,6 +25,9 @@
       "@hooks/*": [
         "src/hooks/*"
       ],
+      "@helpers/*": [
+        "src/helpers/*"
+      ],
       "@common/*": [
         "src/common/*"
       ],

@@ -35,9 +35,11 @@ export const Header: FC = () => {
 
   return (
     <header
-      className={cn(styles['header'], { [styles['header--white']]: isOpen })}
+      className={cn(styles['header'], {
+        [styles['header--white']]: isOpen,
+      })}
     >
-      <div className={styles['wrapper']}>
+      <div className={cn(styles['wrapper'])}>
         <Link href={'/'} className={styles['link']} onClick={handleLogoClick}>
           <h1
             className={cn(styles['logo'], { [styles['logo--white']]: isOpen })}

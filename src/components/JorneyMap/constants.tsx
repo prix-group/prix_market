@@ -17,7 +17,7 @@ export const advantageContent = [
   },
   {
     order: '3.',
-    text: 'А интегрированные системы гарантируют Вашу',
+    text: 'А интегрированные системы гарантируют Вашу безопасность',
     animation: 'pump',
     image: targetSvg.src,
   },

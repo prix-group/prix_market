@@ -1,7 +1,5 @@
 import styles from './styles.module.scss';
 import { FC } from 'react';
-import carpic from '@public/images/car-white-svgrepo-com.svg';
-import loopa from '@public/images/search-svgrepo-com.svg';
 
 interface IAdvantage {
   order: number;

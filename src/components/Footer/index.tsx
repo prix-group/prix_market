@@ -7,7 +7,7 @@ import cn from 'classnames';
 export const Footer: FC = () => {
   return (
     <footer className={styles.footer}>
-      <section className={cn(styles.wrapper, 'wrapper')}>
+      <section className={cn(styles['wrapper'], 'wrapper')}>
         <div className={styles.flex}>
           <div className={styles['holding-info']}>
             <p className={styles['holding-info--title']}>

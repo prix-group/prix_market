@@ -7,7 +7,7 @@ export const Calculator: FC = () => {
   return (
     <section className={styles['calculator']}>
       <FadeInAnimation>
-        <div className="wrapper">
+        <div className={cn(styles['calculator__wrapper'], 'wrapper')}>
           <h2 className={styles['calculator__title']}>
             <span className={styles['calculator__title-line']}>Таможенный</span>
             <span
@@ -19,8 +19,7 @@ export const Calculator: FC = () => {
               калькулятор
             </span>
           </h2>
-
-          <div className={styles['calculator__wrapper']}>
+          <div className={styles['calculator__content']}>
             <div className={styles['calculator__text']}>
               <h3 className={styles['calculator__text-title']}>
                 Из чего складывается стоимость автомобиля?

@@ -48,7 +48,10 @@ export const Features: FC = () => {
           <img
             src={secondCardImg.src}
             alt={''}
-            className={styles['features__card-image']}
+            className={cn(
+              styles['features__card-image'],
+              styles['features__card-image--regulations'],
+            )}
           />
         </div>
       </div>

@@ -2,12 +2,13 @@ import { FC } from 'react';
 import styles from './styles.module.scss';
 import cn from 'classnames';
 import { FadeInAnimation } from '@components/shared/FadeInAnimation';
+import Link from 'next/link';
 
 export const Strategy: FC = () => {
   return (
     <section className={styles['strategy']}>
       <FadeInAnimation>
-        <div className="wrapper">
+        <div className={cn(styles['strategy__wrapper'], 'wrapper')}>
           <h2 className={styles['strategy__title']}>
             <span
               className={cn(
@@ -78,6 +79,9 @@ export const Strategy: FC = () => {
               </span>
             </li>
           </ul>
+          <Link href={'#'} className={styles['strategy__link']}>
+            Узнать подробнее &#8594;
+          </Link>
         </div>
       </FadeInAnimation>
     </section>

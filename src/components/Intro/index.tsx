@@ -6,7 +6,7 @@ export const Intro = () => {
   return (
     <FadeInAnimation>
       <section className={styles.intro}>
-        <div className={cn(styles.wrapper, 'wrapper')}>
+        <div className={cn(styles.wrapper, 'wrapper', styles['intro__wrapper'])}>
           <div className={styles['content']}>
             <div className={styles['content__text']}>
               <p className={styles['content__text-note']}>
@@ -15,7 +15,7 @@ export const Intro = () => {
               <h1 className={styles['content__text-title']}>
                 Онлайн-сервис покупки авто <br /> из-за границы
               </h1>
-              <h3 className={styles['content__subtitle']}>
+              <h3 className={styles['content__text-subtitle']}>
                 Безопасный, быстрый и удобный <br />
                 способ покупки и доставки авто в Казахстан
               </h3>

@@ -125,11 +125,17 @@
 @media screen and (max-width: 420px) {
   .intro {
     padding: 0;
+
+    &__wrapper {
+      height: 820px;
+      max-height: 821px;
+    }
   }
 
   .wrapper {
     width: 100%;
-    padding: 75px 45px;
+    height: 920px;
+    padding: 45px;
 
     flex-direction: column;
     align-items: center;
@@ -140,41 +146,55 @@
     border-radius: 0;
   }
 
+
+
   .content {
-    &__title {
-      width: 100%;
-      font-size: 32px;
-      font-weight: 600;
-    }
+    justify-content: start;
 
-    &__subtitle {
-      font-size: 16px;
-    }
+    &__text {
+      text-align: start;
+      &-note {
+        font-size: 18px;
+        font-weight: 400;
+      }
 
-    &__image {
-      width: 65%;
-      left: 0;
-      margin: 30px auto
+      &-title {
+        font-size: 32px;
+      }
+
+      &-subtitle {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 30px;
+      }
     }
 
     &__statistics {
       margin: 40px 0;
       padding: 0;
+      justify-content: start;
+
+      &-container {
+        margin-right: 20px;
+
+        &:last-of-type {
+          margin: 0;
+        }
+      }
 
       &-title {
-        font-size: 12px;
+        font-size: 24px;
       }
 
       &-note {
-        font-size: 12px;
+        font-size: 13px;
       }
     }
   }
 
   .screen-simulator {
     position: absolute;
-    bottom: -350px;
+    bottom: -263px;
 
-    height: 450px;
   }
 }
